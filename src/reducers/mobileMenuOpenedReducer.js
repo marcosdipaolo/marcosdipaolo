@@ -1,6 +1,6 @@
 import { MENU_MOBILE_TOGGLE } from './types'
 
-export default (oldOpened = false, action) => {
+const mobileMenuOpenedReducer = (oldOpened = false, action) => {
     switch (action.type) {
         case MENU_MOBILE_TOGGLE:
             return action.payload
@@ -8,3 +8,5 @@ export default (oldOpened = false, action) => {
             return oldOpened
     }
 }
+
+export default mobileMenuOpenedReducer

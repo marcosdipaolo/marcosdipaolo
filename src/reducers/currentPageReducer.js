@@ -1,6 +1,6 @@
 import { CURRENT_PAGE } from './types'
 
-export default (oldPage = 'home', action) => {
+const currentPageReducer = (oldPage = 'home', action) => {
     switch (action.type) {
         case CURRENT_PAGE:
             return action.payload
@@ -8,3 +8,5 @@ export default (oldPage = 'home', action) => {
             return oldPage
     }
 }
+
+export default currentPageReducer 
