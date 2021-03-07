@@ -18,8 +18,12 @@ jobs:
       run: find build/ -print
     
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        ftp-server: ftp://qa.marcosdipaolo.com/
-        ftp-username: info@marcosdipaolo.com
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        server: ftp.marcosdipaolo.com/
+        username: info@marcosdipaolo.com
+        password: ${{ secrets.FTP_PASSWORD }}
+        exclude: .git*
+          - .git*/**
+        local-dir: ./dist/
+        server-dir: ./qa/
