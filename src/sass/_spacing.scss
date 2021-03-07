@@ -1,0 +1,82 @@
+$pref-props: (
+    "m": "margin",
+    "p": "padding",
+);
+
+$directions: (
+    "t": "top",
+    "r": "right",
+    "b": "bottom",
+    "l": "left",
+);
+
+$onePx: 1px;
+
+
+
+@for $i from 1 through 100 {
+    $size: $i + 1;
+    .my-#{$size} {
+        margin: $onePx * $size 0!important;
+    }
+}
+
+@for $i from 1 through 100 {
+    $size: $i + 1;
+    .mx-#{$size} {
+        margin: 0 $onePx * $size!important;
+    }
+}
+
+@for $i from 1 through 100 {
+    $size: $i + 1;
+    .m-#{$size} {
+        margin: $onePx * $size!important;
+    }
+}
+
+@for $i from 1 through 100 {
+    $size: $i + 1;
+    .py-#{$size} {
+        padding: $onePx * $size 0!important;
+    }
+}
+
+@for $i from 1 through 100 {
+    $size: $i + 1;
+    .px-#{$size} {
+        padding: 0 $onePx * $size!important;
+    }
+}
+
+@for $i from 1 through 100 {
+    $size: $i + 1;
+    .p-#{$size} {
+        padding: $onePx * $size!important;
+    }
+}
+
+@each $dir, $direction in $directions {
+    @each $prefix, $property in $pref-props {
+        @for $i from 1 through 100 {
+            $size: $i + 1;
+            .#{$prefix}#{$dir}-#{$size} {
+                #{$property}-#{$direction}: $onePx * $size!important;
+            }
+        }
+    }
+}
+
+@for $i from 1 through 200 {
+    $size: $i * 5;
+    .w-#{$size} {
+        width: $onePx * $size!important;
+    }
+}
+
+@for $i from 1 through 200 {
+    $size: $i * 5;
+    .h-#{$size} {
+        height: $onePx * $size!important;
+    }
+}

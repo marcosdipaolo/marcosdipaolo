@@ -1,0 +1,14 @@
+section.home {
+    display: flex;
+    height: calc(100vh - 60px);
+    div {
+        margin: auto;
+        h1 {
+            font-size: 29px;
+            font-weight: 700;
+        }
+        h6 {
+            font-size: 19px;
+        }
+    }
+}

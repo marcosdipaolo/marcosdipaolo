@@ -1,0 +1,1 @@
+ftp-password: ${{ secrets.FTP_PASSWORD }}
