@@ -20,7 +20,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: ftp.marcosdipaolo.com/
+        server: ftp.marcosdipaolo.com
         username: info@marcosdipaolo.com
         password: ${{ secrets.FTP_PASSWORD }}
         exclude: .git*
