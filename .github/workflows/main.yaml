@@ -1,1 +1,25 @@
-ftp-password: ${{ secrets.FTP_PASSWORD }}
+on: push
+name: Build and Publish Front End Framework Website
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        fetch-depth: 2
+
+    - name: Build Project
+      run: |
+        npm install
+        npm run build --if-present
+
+    - name: List output files
+      run: find build/ -print
+    
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      with:
+        ftp-server: ftp://qa.marcosdipaolo.com/
+        ftp-username: info@marcosdipaolo.com
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
