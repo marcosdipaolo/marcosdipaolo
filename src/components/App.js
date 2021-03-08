@@ -10,8 +10,14 @@ import Portfolio from '../components/pages/Portfolio'
 import About from './pages/About/About'
 import ToggleMobileMenu from './sections/header/ToggleMobileMenu'
 import { connect } from 'react-redux'
+import { setCurrentPage } from '../actions'
+import { useEffect } from 'react';
 
 const App = props => {
+  useEffect(() => {
+    const url = window.location.href
+    props.setCurrentPage(url.substring(url.indexOf('#') + 2))
+  }, [])
   return (
     <div className="position-relative">
       <ToggleMobileMenu />
@@ -36,4 +42,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps, { setCurrentPage })(App)

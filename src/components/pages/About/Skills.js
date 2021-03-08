@@ -16,7 +16,7 @@ const Skills = () => {
                 <h3 className="col-12 text-upper my-50">my skills</h3>
             </div>
             {devData.map(data => (
-                <div className="col-6 col-md-3 mb-30">
+                <div className="col-6 col-md-3 mb-30" key={data.language}>
                     <div className={`c100 p${data.percent}`}>
                         <span>{data.percent}%</span>
                         <div className="slice">

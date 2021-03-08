@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const ProfileData = () => {
     const profileData = [
         [
@@ -61,7 +63,7 @@ const ProfileData = () => {
                 </ul>
             </div>
             <div className="col-12 mt-10">
-                <a href="/" className="mdp-btn">download cv</a>
+                <a href="/cv-en.pdf" download target="_self" className="mdp-btn">download cv</a>
             </div>
         </div>
     )
