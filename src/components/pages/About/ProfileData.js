@@ -61,7 +61,7 @@ const ProfileData = () => {
                 </ul>
             </div>
             <div className="col-12 mt-10">
-                <a href="#" className="mdp-btn">download cv</a>
+                <a href="/" className="mdp-btn">download cv</a>
             </div>
         </div>
     )
