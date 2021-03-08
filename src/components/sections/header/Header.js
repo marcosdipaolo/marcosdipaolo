@@ -11,6 +11,8 @@ const Header = props => {
                 return <h1>contact <span>me</span></h1>
             case 'blog':
                 return <h1>my <span>blog</span></h1>
+            default:
+                return ''
         }
     }
     return (
