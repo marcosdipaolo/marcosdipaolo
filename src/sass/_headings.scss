@@ -6,6 +6,10 @@ h1 {
     span {
         color: $primary
     }
+    &.big {
+        font-size: 56px;
+        text-align: center;
+    }
 }
 
 p.title-bg {
@@ -19,9 +23,15 @@ p.title-bg {
     line-height: 0.7;
     text-transform: uppercase;
     font-weight: 800;
-    transform: translateY(-121%);
-    color: rgba(255, 255, 255, .14);
+    transform: translateY(-90%);
+    color: rgba(255, 255, 255, .07);
     @media(min-width: 576px) {
         display: block;
     }
+}
+
+h3 {
+    font-size: 21px;
+    font-weight: 600;
+    font-family: $font-secondary;
 }

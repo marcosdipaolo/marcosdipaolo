@@ -14,42 +14,45 @@ $onePx: 1px;
 
 
 
-@for $i from 1 through 100 {
+@for $i from -1 through 100 {
     $size: $i + 1;
     .my-#{$size} {
-        margin: $onePx * $size 0!important;
+        margin-top: $onePx * $size!important;
+        margin-bottom: $onePx * $size!important;
     }
 }
 
-@for $i from 1 through 100 {
+@for $i from -1 through 100 {
     $size: $i + 1;
     .mx-#{$size} {
         margin: 0 $onePx * $size!important;
     }
 }
 
-@for $i from 1 through 100 {
+@for $i from -1 through 100 {
     $size: $i + 1;
     .m-#{$size} {
         margin: $onePx * $size!important;
     }
 }
 
-@for $i from 1 through 100 {
+@for $i from -1 through 100 {
     $size: $i + 1;
     .py-#{$size} {
-        padding: $onePx * $size 0!important;
+        padding-top: $onePx * $size!important;
+        padding-bottom: $onePx * $size!important;
     }
 }
 
-@for $i from 1 through 100 {
+@for $i from -1 through 100 {
     $size: $i + 1;
     .px-#{$size} {
-        padding: 0 $onePx * $size!important;
+        padding-left: $onePx * $size!important;
+        padding-right: $onePx * $size!important;
     }
 }
 
-@for $i from 1 through 100 {
+@for $i from -1 through 100 {
     $size: $i + 1;
     .p-#{$size} {
         padding: $onePx * $size!important;
@@ -58,7 +61,7 @@ $onePx: 1px;
 
 @each $dir, $direction in $directions {
     @each $prefix, $property in $pref-props {
-        @for $i from 1 through 100 {
+        @for $i from -1 through 100 {
             $size: $i + 1;
             .#{$prefix}#{$dir}-#{$size} {
                 #{$property}-#{$direction}: $onePx * $size!important;
@@ -67,6 +70,8 @@ $onePx: 1px;
     }
 }
 
+// width, step: 5
+
 @for $i from 1 through 200 {
     $size: $i * 5;
     .w-#{$size} {
@@ -74,9 +79,19 @@ $onePx: 1px;
     }
 }
 
+// height, step: 5
+
 @for $i from 1 through 200 {
     $size: $i * 5;
     .h-#{$size} {
         height: $onePx * $size!important;
+    }
+}
+
+// line-height 
+
+@for $i from 1 through 50 {
+    .lh-#{$i} {
+        line-height: $onePx * $i!important;
     }
 }

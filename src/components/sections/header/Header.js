@@ -1,9 +1,25 @@
+import { connect } from 'react-redux'
+
 const Header = props => {
+    const resolveHeader = () => {
+        switch(props.currentPage) {
+            case 'about':
+                return <h1>about <span>me</span></h1>
+            case 'portfolio':
+                return <h1>my <span>portfolio</span></h1>
+            case 'contact':
+                return <h1>contact <span>me</span></h1>
+            case 'blog':
+                return <h1>my <span>blog</span></h1>
+        }
+    }
     return (
-        <section className="header h-60 pt-17 pl-20">
-            <h1 className="">My <span>App</span></h1>
+        <section className="d-sm-none header h-60 pt-15 pl-25">
+            {resolveHeader()}
         </section>
     )
 }
 
-export default Header
+const mapStateToProps = state => ({ currentPage: state.currentPage })
+
+export default connect(mapStateToProps)(Header)

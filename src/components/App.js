@@ -7,7 +7,7 @@ import Home from '../components/pages/Home'
 import Blog from '../components/pages/Blog'
 import Contact from '../components/pages/Contact'
 import Portfolio from '../components/pages/Portfolio'
-import About from '../components/pages/About'
+import About from './pages/About/About'
 import ToggleMobileMenu from './sections/header/ToggleMobileMenu'
 import { connect } from 'react-redux'
 

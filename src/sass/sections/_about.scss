@@ -1,0 +1,132 @@
+section.about {
+    @media (min-width: 576px) {
+        h3 {
+            font-size: 26px;
+        }
+    }
+    div.image-container {
+        text-align: center;
+        img {
+            border-radius: 50%;
+            border: 5px solid #222;
+            max-width: 235px;
+        }
+    }
+    .profile-data {
+        ul li {
+            font-size: 14px;
+            .key {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    // achievements
+
+    .stats {
+        border: 1px solid #282828;
+        h3 {
+            position: relative;
+            color: $primary;
+            font-size: 40px;
+            font-weight: 700;
+            @media (min-width: 576px) {
+                font-size: 50px;
+            }
+            &:after {
+                content: "+";
+                position: absolute;
+                font-size: 33px;
+                font-weight: 300;
+                top: 2px;
+            }
+        }
+        p {
+            position: relative;
+            @media(min-width: 576px) {
+                padding-left: 45px;
+            }
+            &::before {
+                display: none;
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 13px;
+                width: 30px;
+                height: 1px;
+                background: #777;
+                @media(min-width: 576px) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    // skills
+
+    .skills {
+        .c100 {
+            float: none !important;
+            margin: 0 auto;
+            background-color: #252525;
+            transform: scale(0.8);
+            &:after {
+                background-color: #111;
+            }
+            @media (min-width: 576px) {
+                transform: scale(1);
+            }
+        }
+    }
+
+    // education & xp
+
+    .educ-xp {
+        ul {
+            li {
+                .icon {
+                    left: 0;
+                    border-radius: 50%;
+                    background-color: $primary;
+                    padding: 9px 0 0 12px;
+                    z-index: 1;
+                }
+                .time {
+                    display: inline-block;
+                    opacity: 0.8;
+                }
+                h5 {
+                    font-family: $font-secondary;
+                    span {
+                        opacity: 0.8;
+                        font-weight: 600;
+                        font-size: 15px;
+                        position: relative;
+                        font-family: $font-primary;
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 10px;
+                            height: 2px;
+                            background-color: #fff;
+                            left: 7px;
+                            top: 9px;
+                            opacity: 0.8;
+                        }
+                    }
+                }
+                p {
+                    color: #eee;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 20px;
+                    bottom: 0;
+                    border-left: 1px solid #333;
+                }
+            }
+        }
+    }
+}

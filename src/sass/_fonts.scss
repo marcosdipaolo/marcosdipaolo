@@ -1,4 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 $font-primary: 'Open sans', sans-serif;
 $font-secondary: 'Poppins', sans-serif;
+
+$onePx: 1px;
+
+@for $i from 12 to 48 {
+    .fs-#{$i} {
+        font-size: $onePx * $i;
+    }
+}
+
+@for $i from 1 to 9 {
+    $weight: $i*100;
+    .fw-#{$weight} {
+        font-weight: $weight;
+    }
+}
