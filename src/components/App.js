@@ -15,9 +15,7 @@ import { useEffect } from 'react';
 
 const App = props => {
   useEffect(() => {
-    const url = window.location.href
-    const path = url.substring(url.indexOf('#') + 2)
-    props.setCurrentPage(path || 'home')
+    props.setCurrentPage(window.location.pathname.substr(1) || 'home')
   }, [props])
   return (
     <div className="position-relative">
