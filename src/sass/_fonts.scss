@@ -7,13 +7,13 @@ $onePx: 1px;
 
 @for $i from 12 to 48 {
     .fs-#{$i} {
-        font-size: $onePx * $i;
+        font-size: $onePx * $i!important;
     }
 }
 
 @for $i from 1 to 9 {
     $weight: $i*100;
     .fw-#{$weight} {
-        font-weight: $weight;
+        font-weight: $weight!important;
     }
 }

@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { setCurrentPage } from '../../actions'
+import { setCurrentPage, getPosts } from '../../actions'
 
 const Home = props => {
     const onClickHandler = page => {
         props.setCurrentPage(page)
+        props.getPosts()
+        console.log(props.posts);
     }
     return (
         <section className="container-fluid home p-25">
@@ -18,6 +20,6 @@ const Home = props => {
     )
 }
 
-const mapStateToProps = state => ({ currentPage: state.currentPage })
+const mapStateToProps = state => ({ currentPage: state.currentPage, posts: state.posts })
 
-export default connect(mapStateToProps, { setCurrentPage })(Home)
+export default connect(mapStateToProps, { setCurrentPage, getPosts })(Home)

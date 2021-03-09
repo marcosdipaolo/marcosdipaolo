@@ -4,7 +4,7 @@ import MobileNav from './MobileNav'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import history from "../history";
 import Home from '../components/pages/Home'
-import Blog from '../components/pages/Blog'
+import Blog from './pages/Blog/Blog'
 import Contact from '../components/pages/Contact'
 import Portfolio from '../components/pages/Portfolio'
 import About from './pages/About/About'

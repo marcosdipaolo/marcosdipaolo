@@ -8,7 +8,7 @@ const Header = props => {
             case 'portfolio':
                 return <h1>my <span>portfolio</span></h1>
             case 'contact':
-                return <h1>contact <span>me</span></h1>
+                return <h1>get in <span>touch</span></h1>
             case 'blog':
                 return <h1>my <span>blog</span></h1>
             default:

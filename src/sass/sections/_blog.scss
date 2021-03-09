@@ -1,0 +1,32 @@
+.posts {
+    .post {
+        article {
+            background: #252525;
+            border-radius: 10px;
+            overflow: hidden;
+            &:hover {
+                .thumb img {
+                    transform: scale(1.2);
+                }
+            }
+            .thumb {
+                border-bottom: 5px solid $primary;
+                height: 300px;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                overflow: hidden;
+                img {
+                    transition: all 0.3s;
+                }
+            }
+            .content {
+                .body {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+input,
+textarea {
+    display: inline-block;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #252525;
+    border: none;
+    &:focus {
+        outline: none;
+    }
+    color: #eee;
+}
+
+input[type="text"] {
+    height: 43px;
+}
+textarea {
+    height: 150px;
+}
