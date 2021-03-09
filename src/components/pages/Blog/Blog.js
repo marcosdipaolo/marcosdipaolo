@@ -9,6 +9,8 @@ const Blog = props => {
     }, [props])
     return (
         <div className="posts container px-25 st-list">
+            <h1 className="big d-none d-sm-block pt-100">my <span>blog</span></h1>
+            <p className="title-bg">posts</p>
             <div className="row">
                 {props.posts.map(post => 
                 <PostPreview

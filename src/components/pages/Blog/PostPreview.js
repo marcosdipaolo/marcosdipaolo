@@ -5,7 +5,7 @@ const PostPreview = props => {
         return (tmp.textContent || tmp.innerText || "").substr(0,100);
     }
     return (
-        <div className="post col-12 col-md-6 mt-30 col-xl-4 mb-30">
+        <div className="post col-12 col-md-6 mt-30 col-xl-4 mb-30 px-15">
             <article>
                 <div className="thumb" style={{backgroundImage: `url(${props.thumb})`}}></div>
                 <div className="content p-25">
