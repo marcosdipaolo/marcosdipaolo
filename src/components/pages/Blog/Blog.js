@@ -6,12 +6,13 @@ import PostPreview from "./PostPreview"
 const Blog = props => {
     useEffect(() => {
         props.getPosts()
-    }, [])
+    }, [props])
     return (
         <div className="posts container px-25 st-list">
             <div className="row">
                 {props.posts.map(post => 
                 <PostPreview
+                    key={post.id}
                     title={post.title.rendered}
                     content={post.excerpt.rendered}
                     thumb={post._embedded['wp:featuredmedia'][0].link}

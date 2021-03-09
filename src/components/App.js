@@ -1,7 +1,7 @@
 import '../sass/style.scss'
 import Header from './sections/header/Header'
 import MobileNav from './MobileNav'
-import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom'
 import history from "../history";
 import Home from '../components/pages/Home'
 import Blog from './pages/Blog/Blog'
@@ -18,7 +18,7 @@ const App = props => {
     const url = window.location.href
     const path = url.substring(url.indexOf('#') + 2)
     props.setCurrentPage(path || 'home')
-  }, [])
+  }, [props])
   return (
     <div className="position-relative">
       <ToggleMobileMenu />
