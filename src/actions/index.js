@@ -12,7 +12,7 @@ export const setCurrentPage = page => ({
 })
 
 export const getPosts = () => async dispatch => {
-    const { data } = await blog.get('/wp-json/wp/v2/posts?_embed')
+    const { data } = await blog.get('/wp-json/wp/v2/posts?_embed&per_page=9')
     dispatch({type: GET_POSTS, payload: data})
 }
 

@@ -12,6 +12,7 @@
 @import 'sections/about';
 //nav
 @import "sections/nav/_mobile-menu";
+@import "sections/nav/_desktop-nav";
 // header
 @import "sections/header";
 @import "sections/home";
@@ -20,7 +21,6 @@
 
 @import "icons/font-awesome.scss";
 body {
-    background-color: black;
     color: white;
     font-family: $font-primary;
     font-size: 15px;

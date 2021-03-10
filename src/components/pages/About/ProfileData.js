@@ -43,7 +43,7 @@ const ProfileData = () => {
                     {
                         profileData[0].map(data => <li className="mb-20" key={data.value}>
                             <span className="text-wrap key text-capitalize">{data.key}: </span>
-                            <span className="text-wrap value fw-600">{data.value}</span>
+                            <span className="d-block d-sm-inline-block d-lg-block d-xl-inline-block text-wrap value fw-600">{data.value}</span>
                         </li>
                         )
                     }
@@ -54,7 +54,7 @@ const ProfileData = () => {
                     {
                         profileData[1].map(data => <li className="mb-20" key={data.value}>
                             <span className="text-wrap key text-capitalize">{data.key}: </span>
-                            <span className="text-wrap value fw-600">{data.value}</span>
+                            <span className="d-block d-sm-inline-block d-lg-block d-xl-inline-block text-wrap value fw-600">{data.value}</span>
                         </li>
                         )
                     }

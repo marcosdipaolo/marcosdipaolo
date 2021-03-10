@@ -31,3 +31,9 @@ button {
     color: white;
     border: none;
 }
+
+@media (max-width: 1350px) and (min-width: 992px) {
+    .container {
+        max-width: calc(100% - 195px);
+    }
+}

@@ -1,6 +1,7 @@
 import '../sass/style.scss'
 import Header from './sections/header/Header'
 import MobileNav from './MobileNav'
+import DesktopNav from './DesktopNav'
 import { Router, Route, Switch } from 'react-router-dom'
 import history from "../history";
 import Home from '../components/pages/Home'
@@ -23,12 +24,13 @@ const App = props => {
       {props.currentPage !== 'home' ? <Header /> : ''}
       <Router history={history}>
         <MobileNav />
+        <DesktopNav />
         <Switch>
-          <Route path="/" exact component={Home}></Route>
-          <Route path="/about" exact component={About}></Route>
-          <Route path="/blog" exact component={Blog}></Route>
-          <Route path="/contact" exact component={Contact}></Route>
-          <Route path="/portfolio" exact component={Portfolio}></Route>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" exact component={About} />
+          <Route path="/blog" exact component={Blog} />
+          <Route path="/contact" exact component={Contact} />
+          <Route path="/portfolio" exact component={Portfolio} />
         </Switch>
       </Router>
     </div>

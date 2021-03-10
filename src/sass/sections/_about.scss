@@ -1,8 +1,12 @@
 section.about {
-    @media (min-width: 576px) {
-        h3 {
-            font-size: 26px;
+    padding: 0 25px;
+        @media (min-width: 576px) {
+            h3 {
+                font-size: 26px;
+            }
         }
+    @media(min-width: 1400px) {
+        padding: 0 100px!important;
     }
     div.image-container {
         text-align: center;
@@ -14,7 +18,7 @@ section.about {
     }
     .profile-data {
         ul li {
-            font-size: 14px;
+            font-size: 16px;
             .key {
                 opacity: 0.8;
             }
@@ -22,45 +26,52 @@ section.about {
     }
 
     // achievements
-
-    .stats {
-        border: 1px solid #282828;
-        h3 {
-            position: relative;
-            color: $primary;
-            font-size: 40px;
-            font-weight: 700;
-            @media (min-width: 576px) {
-                font-size: 50px;
-            }
-            &:after {
-                content: "+";
-                position: absolute;
-                font-size: 33px;
-                font-weight: 300;
-                top: 2px;
-            }
+    .achievements {
+        margin: 50px 0;
+        @media(min-width: 992px) {
+            margin: 20px 0;
         }
-        p {
-            position: relative;
-            @media(min-width: 576px) {
-                padding-left: 45px;
+        .stats {
+            border: 1px solid #282828;
+            h2 {
+                font-family: $font-secondary;
+                position: relative;
+                color: $primary;
+                font-size: 50px;
+                font-weight: 900;
+                @media (min-width: 576px) {
+                    font-size: 64px;
+                }
+                &:after {
+                    content: "+";
+                    position: absolute;
+                    font-size: 33px;
+                    font-weight: 300;
+                    top: 2px;
+                }
             }
-            &::before {
-                display: none;
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 13px;
-                width: 30px;
-                height: 1px;
-                background: #777;
+            p {
+                position: relative;
                 @media(min-width: 576px) {
-                    display: block;
+                    padding-left: 45px;
+                }
+                &::before {
+                    display: none;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 13px;
+                    width: 30px;
+                    height: 1px;
+                    background: #777;
+                    @media(min-width: 576px) {
+                        display: block;
+                    }
                 }
             }
         }
     }
+
 
     // skills
 
