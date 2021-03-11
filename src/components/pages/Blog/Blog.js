@@ -21,7 +21,7 @@ class Blog extends Component {
                                     key={post.id}
                                     title={post.title.rendered}
                                     content={post.excerpt.rendered}
-                                    thumb={post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].link : ''}
+                                    thumb={post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].media_details.sizes.medium : ''}
                                 />
                             }
                         )
