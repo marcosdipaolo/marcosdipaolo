@@ -4,6 +4,7 @@ const PostPreview = props => {
         tmp.innerHTML = props.content;
         return (tmp.textContent || tmp.innerText || "").substr(0,60);
     }
+    console.log(props.thumb)
     return (
         <div className="post col-12 col-md-6 mt-30 col-xl-4 mb-30">
             <article style={{height: '100%'}}>

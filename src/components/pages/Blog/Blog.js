@@ -8,7 +8,15 @@ class Blog extends Component {
     componentDidMount() {
         this.props.getPosts(1)
     }
-
+    thumbnailResolver(post){
+        let thumb = ''
+        if(post._embedded['wp:featuredmedia']) {
+            const size = post._embedded['wp:featuredmedia'][0].media_details.sizes.blog ||
+                post._embedded['wp:featuredmedia'][0].media_details.sizes.medium
+            thumb = size.source_url
+        }
+        return thumb
+    }
     render() {
         return (
             <div className="posts container px-25 st-list">
@@ -21,7 +29,7 @@ class Blog extends Component {
                                     key={post.id}
                                     title={post.title.rendered}
                                     content={post.excerpt.rendered}
-                                    thumb={post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].media_details.sizes.medium : ''}
+                                    thumb={this.thumbnailResolver(post)}
                                 />
                             }
                         )
