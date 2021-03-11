@@ -1,5 +1,18 @@
 .desktop-nav {
-  .active {
-    background-color: $primary;
+  position: fixed;
+  top: calc((100vh / 2) - (386px / 2));
+  right: 10px;
+}
+
+ul.icons {
+  padding-left: 0;
+  margin-top: 20px;
+
+  li {
+    background-color: #333;
+    border-radius: 50%;
+    &.active {
+      background-color: $primary;
+    }
   }
 }

@@ -1,6 +1,12 @@
 import { GET_POSTS } from "./types";
 
-const getPostsReducer = (oldList = [], action) => {
+const initialSate = {
+    posts: [],
+    currentPage: 0,
+    totalPages: 0
+}
+
+const blogReducer = (oldList = initialSate, action) => {
     switch (action.type) {
         case GET_POSTS:
             return action.payload
@@ -9,4 +15,4 @@ const getPostsReducer = (oldList = [], action) => {
     }
 }
 
-export default getPostsReducer
+export default blogReducer

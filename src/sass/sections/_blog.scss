@@ -1,5 +1,9 @@
 .posts {
     .post {
+        padding: 0 15px;
+        @media(min-width: 992px) {
+            padding: 0 30px;
+        }
         article {
             background: #252525;
             border-radius: 10px;
@@ -26,6 +30,19 @@
                         font-size: 14px;
                     }
                 }
+            }
+        }
+    }
+
+    .blog-nav {
+        li {
+            text-align: center;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            padding-top: 5px;
+            &:not(:last-of-type) {
+                margin-right: 10px;
             }
         }
     }

@@ -1,23 +1,19 @@
-p {
-    i {
-        top: 5px;
-        left: 0px;
-    }
-    &:nth-child(4) {
+section.contact {
+    p {
         i {
-            top: 2px;
+            top: 5px;
+            left: 0;
+        }
+
+        &:nth-child(4) {
+            i {
+                top: 2px;
+            }
+        }
+
+        span.title {
+            opacity: .8;
         }
     }
-    span.title {
-        opacity: .8;
-    }
-}
 
-ul.icons {
-    padding-left: 0;
-    margin-top: 20px;
-    li {
-        background-color: #333;
-        border-radius: 50%;
-    }
 }

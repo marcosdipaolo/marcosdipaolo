@@ -1,6 +1,6 @@
 const Contact = props => {
     return (
-        <section className="container contact pt-20 px-25">
+        <section className="container contact pt-20">
             <h1 className='big d-none d-sm-block mt-60'>get in <span>touch</span></h1>
             <p className="title-bg d-none d-sm-block">contact</p>
             {/* DATA */}

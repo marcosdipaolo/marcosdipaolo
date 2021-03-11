@@ -11,6 +11,7 @@ section.home {
 
     div.img {
         background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
         height: calc(100vh - 60px);
         z-index: 111;
@@ -23,14 +24,40 @@ section.home {
     div.content {
         height: 100vh;
         .text {
-            max-width: 600px;
+            img {
+                border-radius: 50%;
+                border: 3px solid #252525;
+            }
+
+            max-width: 500px;
+
             h1 {
-                font-size: 48px;
+                font-size: 40px;
                 font-weight: 700;
             }
 
             h6 {
-                font-size: 19px;
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            @media(min-width: 576px) {
+                h1 {
+                    font-size: 48px;
+                    font-weight: 700;
+                }
+
+                h6 {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
             }
         }
     }
