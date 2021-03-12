@@ -17,6 +17,7 @@ export const getPost = id => async (dispatch) => {
             type: GET_POST,
             payload: null
         })
+        return
     }
     const {data} = await blog.get(`/wp-json/wp/v2/posts/${id}?_embed`)
     dispatch({
