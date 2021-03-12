@@ -48,3 +48,39 @@
         }
     }
 }
+
+.single-post {
+    max-width: 700px;
+    .content {
+        p {
+            font-size: 14px;
+            @media(min-width: 576px) {
+                font-size: 16px;
+            }
+            margin: 10px 0;
+        }
+        audio {
+            margin: 20px 0;
+        }
+    }
+    .meta small span {
+        i {
+            margin: 0 10px 0 0;
+            color: $primary;
+        }
+        &:not(:first-of-type) i {
+            margin: 0 10px;
+        }
+    }
+    h2 {
+        font-family: $font-secondary;
+        text-transform: none;
+        font-size: 28px;
+        @media(min-width: 576px) {
+            font-size: 45px;
+        }
+    }
+    img {
+        width: 100%;
+    }
+}

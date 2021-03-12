@@ -8,7 +8,7 @@ const DesktopNav = props => {
         {to: "/about", icon: "user", page: 'about'},
         {to: "/portfolio", icon: "briefcase", page: 'portfolio'},
         {to: "/contact", icon: "envelope-open", page: 'contact'},
-        {to: "blog", icon: "comments", page: 'blog'}
+        {to: "/blog", icon: "comments", page: 'blog'}
     ]
 
     const onClickHandler = page => {

@@ -13,15 +13,20 @@ import ToggleMobileMenu from './sections/header/ToggleMobileMenu'
 import { connect } from 'react-redux'
 import { setCurrentPage } from '../actions'
 import { useEffect } from 'react';
+import SinglePost from "./pages/Blog/SinglePost";
 
-const App = props => {
+const App = ({setCurrentPage, currentPage}) => {
   useEffect(() => {
-    props.setCurrentPage(window.location.pathname.substr(1) || 'home')
-  }, [props])
+    let url = window.location.pathname.substr(1) || 'home'
+    if(url.includes('/')) {
+      url = url.split('/')[0]
+    }
+    setCurrentPage(url)
+  }, [setCurrentPage])
   return (
     <div className="position-relative">
       <ToggleMobileMenu />
-      {props.currentPage !== 'home' ? <Header /> : ''}
+      {currentPage !== 'home' ? <Header /> : ''}
       <Router history={history}>
         <MobileNav />
         <DesktopNav />
@@ -29,6 +34,7 @@ const App = props => {
           <Route path="/" exact component={Home} />
           <Route path="/about" exact component={About} />
           <Route path="/blog" exact component={Blog} />
+          <Route path="/blog/:id" exact component={SinglePost} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/portfolio" exact component={Portfolio} />
         </Switch>

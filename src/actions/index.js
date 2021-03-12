@@ -1,4 +1,4 @@
-import {MENU_MOBILE_TOGGLE, CURRENT_PAGE, GET_POSTS} from "../reducers/types"
+import {MENU_MOBILE_TOGGLE, CURRENT_PAGE, GET_POSTS, GET_POST} from "../reducers/types"
 import blog from '../apis/blog'
 
 export const toggleMobileMenuOpened = opened => ({
@@ -10,6 +10,20 @@ export const setCurrentPage = page => ({
     type: CURRENT_PAGE,
     payload: page
 })
+
+export const getPost = id => async (dispatch) => {
+    if (!id) {
+        dispatch({
+            type: GET_POST,
+            payload: null
+        })
+    }
+    const {data} = await blog.get(`/wp-json/wp/v2/posts/${id}?_embed`)
+    dispatch({
+        type: GET_POST,
+        payload: data
+    })
+}
 
 export const getPosts = page => async (dispatch, getState) => {
     const currentPage = getState().blog.currentPage
@@ -26,4 +40,3 @@ export const getPosts = page => async (dispatch, getState) => {
         }
     })
 }
-
