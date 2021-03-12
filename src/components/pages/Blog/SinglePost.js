@@ -23,8 +23,8 @@ const SinglePost = ({post, match, getPost, currentPage}) => {
     }
     return (
         <section className="container px-25 single-post pt-25">
-            <h1 className='big d-none d-sm-block mt-60'>get in <span>touch</span></h1>
-            <p className="title-bg d-none d-sm-block">contact</p>
+            <h1 className='big d-none d-sm-block mt-60'>my <span>blog</span></h1>
+            <p className="title-bg d-none d-sm-block">posts</p>
             <div className="meta">
                 <small>
                     <span className="author">
