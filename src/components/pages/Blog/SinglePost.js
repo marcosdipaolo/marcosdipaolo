@@ -26,7 +26,7 @@ const SinglePost = ({post, match, getPost, currentPage}) => {
         <section className="container px-25 single-post pt-25">
             <h1 className='big d-none d-sm-block mt-60'>my <span>blog</span></h1>
             <p className="title-bg d-none d-sm-block">posts</p>
-            {post ?
+            {(post && post._embedded) ?
                 <div>
                     <div className="meta">
                         <small>
