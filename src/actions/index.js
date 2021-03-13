@@ -27,6 +27,17 @@ export const getPost = id => async (dispatch) => {
 }
 
 export const getPosts = page => async (dispatch, getState) => {
+    if (!page) {
+        dispatch({
+            type: GET_POSTS,
+            payload: {
+                posts: [],
+                currentPage: 0,
+                totalPages: 0
+            }
+        })
+        return
+    }
     const currentPage = getState().blog.currentPage
     if (page === currentPage) {
         return

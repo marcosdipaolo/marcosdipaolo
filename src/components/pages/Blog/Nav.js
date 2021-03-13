@@ -13,12 +13,17 @@ const Nav = props => {
         return data
     }
 
+    const onClickHandler = n => {
+        props.getPosts(null)
+        props.getPosts(n)
+    }
+
     return <ul className="icons blog-nav d-block text-center">
         {
             buildListData().map(
                 data =>
                     <li
-                        onClick={() => props.getPosts(data.number)}
+                        onClick={() => onClickHandler(data.number)}
                         key={data.number}
                         className={(data.active ? 'active ' : '') + 'mb-10'}
                     >
