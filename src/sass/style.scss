@@ -6,6 +6,7 @@
 @import "buttons";
 @import "utilities";
 @import "forms";
+@import "spinner";
 @import "circle";
 
 // sections
@@ -18,8 +19,8 @@
 @import "sections/home";
 @import "sections/contact";
 @import "sections/blog";
-
 @import "icons/font-awesome.scss";
+
 body {
     color: white;
     font-family: $font-primary;

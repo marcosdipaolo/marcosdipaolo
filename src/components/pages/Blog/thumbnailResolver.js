@@ -1,6 +1,9 @@
 const thumbnailResolver = (post, size = null) => {
     let thumb = ''
-    if (size && post._embedded['wp:featuredmedia']) {
+    if (size &&
+        post._embedded['wp:featuredmedia'] &&
+        post._embedded['wp:featuredmedia'][0].media_details.sizes[size]
+    ) {
         return post._embedded['wp:featuredmedia'][0].media_details.sizes[size].source_url
     }
     if(post._embedded['wp:featuredmedia']) {
