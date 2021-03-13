@@ -36,12 +36,17 @@
 
     .blog-nav {
         li {
+            background-color: #222;
             cursor: pointer;
             text-align: center;
             display: inline-block;
-            width: 40px;
-            height: 40px;
-            padding-top: 5px;
+            width: 42px;
+            height: 42px;
+            padding-top: 8px;
+            transition: background-color 300ms;
+            &:hover {
+                background-color: $primary;
+            }
             &:not(:last-of-type) {
                 margin-right: 10px;
             }
