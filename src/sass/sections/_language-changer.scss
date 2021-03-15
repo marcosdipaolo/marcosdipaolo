@@ -1,0 +1,11 @@
+.language-changer {
+    span {
+        cursor: pointer;
+        &.active {
+            color: $primary;
+        }
+        @media(min-width: 992px) {
+            font-weight: 700;
+        }
+    }
+}

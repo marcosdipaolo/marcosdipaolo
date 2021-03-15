@@ -1,4 +1,4 @@
-import {MENU_MOBILE_TOGGLE, CURRENT_PAGE, GET_POSTS, GET_POST} from "../reducers/types"
+import {MENU_MOBILE_TOGGLE, CURRENT_PAGE, GET_POSTS, GET_POST, CHANGE_LANGUAGE} from "../reducers/types"
 import blog from '../apis/blog'
 
 export const toggleMobileMenuOpened = opened => ({
@@ -51,4 +51,11 @@ export const getPosts = page => async (dispatch, getState) => {
             totalPages: headers['x-wp-totalpages']
         }
     })
+}
+
+export const changeLanguage = (lang) => {
+    return {
+        type: CHANGE_LANGUAGE,
+        payload: lang
+    }
 }

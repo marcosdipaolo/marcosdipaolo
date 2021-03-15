@@ -5,10 +5,12 @@ const Header = props => {
         switch(props.currentPage) {
             case 'about':
                 return <h1>about <span>me</span></h1>
-            case 'portfolio':
-                return <h1>my <span>portfolio</span></h1>
+            case 'projects':
+                return <h1>my <span>projects</span></h1>
             case 'contact':
                 return <h1>get in <span>touch</span></h1>
+            case 'music':
+                return <h1>my <span>music</span></h1>
             case 'blog':
                 return <h1>my <span>blog</span></h1>
             default:

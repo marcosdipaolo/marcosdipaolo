@@ -7,22 +7,26 @@ import history from "../history";
 import Home from '../components/pages/Home'
 import Blog from './pages/Blog/Blog'
 import Contact from '../components/pages/Contact'
-import Portfolio from '../components/pages/Portfolio'
+import Projects from './pages/Projects'
 import About from './pages/About/About'
+import Music from './pages/Music'
 import ToggleMobileMenu from './sections/header/ToggleMobileMenu'
 import { connect } from 'react-redux'
 import { setCurrentPage } from '../actions'
 import { useEffect } from 'react';
 import SinglePost from "./pages/Blog/SinglePost";
+import {useTranslation} from 'react-i18next'
 
-const App = ({setCurrentPage, currentPage}) => {
+const App = ({setCurrentPage, currentPage, currentLanguage}) => {
+  const {t, i18n} = useTranslation()
   useEffect(() => {
     let url = window.location.pathname.substr(1) || 'home'
     if(url.includes('/')) {
       url = url.split('/')[0]
     }
     setCurrentPage(url)
-  }, [setCurrentPage])
+    i18n.changeLanguage(currentLanguage)
+  }, [setCurrentPage, currentLanguage])
   return (
     <div className="position-relative">
       <ToggleMobileMenu />
@@ -36,7 +40,8 @@ const App = ({setCurrentPage, currentPage}) => {
           <Route path="/blog" exact component={Blog} />
           <Route path="/blog/:id" exact component={SinglePost} />
           <Route path="/contact" exact component={Contact} />
-          <Route path="/portfolio" exact component={Portfolio} />
+          <Route path="/projects" exact component={Projects} />
+          <Route path="/music" exact component={Music} />
         </Switch>
       </Router>
     </div>
@@ -45,7 +50,8 @@ const App = ({setCurrentPage, currentPage}) => {
 
 const mapStateToProps = state => {
   return {
-    currentPage: state.currentPage
+    currentPage: state.currentPage,
+    currentLanguage: state.currentLanguage
   }
 }
 

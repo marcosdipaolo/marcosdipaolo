@@ -1,0 +1,48 @@
+{
+  "translation": {
+    "pages": {
+      "about": {
+        "sectionTitle": "<0>quien  <1>soy</1></0>",
+        "titleBg": "curriculum",
+        "personalInfos": "info personal",
+        "firstName": "nombre",
+        "lastName": "apellido",
+        "age": "edad",
+        "nationality": "nacionalidad",
+        "freelance": "freelance",
+        "address": "ubicación",
+        "phone": "teléfono",
+        "email": "email",
+        "skype": "skype",
+        "languages": "idiomas",
+        "downloadCv": "descargar cv"
+      },
+      "blog": {
+        "sectionTitle": "<0>mi  <1>blog</1></0>",
+        "titleBg": "artículos"
+      },
+      "contact": {
+        "sectionTitle": "<0>escribí  <1>me</1></0>",
+        "titleBg": "contacto"
+      },
+      "music": {
+        "sectionTitle": "<0>mi  <1>música</1></0>",
+        "titleBg": "discos"
+      },
+      "projects": {
+        "sectionTitle": "<0>mis  <1>proyectos</1></0>",
+        "titleBg": "works"
+      }
+    },
+    "nav": {
+      "items": {
+        "blog": "blog",
+        "about": "quien soy",
+        "projects": "proyectos",
+        "home": "inicio",
+        "contact": "contacto",
+        "music": "música"
+      }
+    }
+  }
+}

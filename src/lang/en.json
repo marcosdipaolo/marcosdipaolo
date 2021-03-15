@@ -1,0 +1,48 @@
+{
+  "translation": {
+    "pages": {
+      "about": {
+        "sectionTitle": "<0>about  <1>me</1></0>",
+        "titleBg": "resume",
+        "personalInfos": "personal infos",
+        "firstName": "first name",
+        "lastName": "last name",
+        "age": "age",
+        "nationality": "nationality",
+        "freelance": "freelance",
+        "address": "address",
+        "phone": "phone",
+        "email": "email",
+        "skype": "skype",
+        "languages": "languages",
+        "downloadCv": "download cv"
+      },
+      "blog": {
+        "sectionTitle": "<0>my  <1>blog</1></0>",
+        "titleBg": "posts"
+      },
+      "contact": {
+        "sectionTitle": "<0>get in <1>touch</1></0>",
+        "titleBg": "contact"
+      },
+      "music": {
+        "sectionTitle": "<0>my  <1>music</1></0>",
+        "titleBg": "albums"
+      },
+      "projects": {
+        "sectionTitle": "<0>my  <1>proyects</1></0>",
+        "titleBg": "works"
+      }
+    },
+    "nav": {
+      "items": {
+        "blog": "blog",
+        "about": "about",
+        "projects": "projects",
+        "home": "home",
+        "contact": "contact",
+        "music": "music"
+      }
+    }
+  }
+}

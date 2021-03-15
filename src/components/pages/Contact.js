@@ -1,8 +1,9 @@
+import SectionTitle from "../SectionTitle";
+
 const Contact = props => {
     return (
         <section className="container contact pt-20">
-            <h1 className='big d-none d-sm-block mt-60'>get in <span>touch</span></h1>
-            <p className="title-bg d-none d-sm-block">contact</p>
+            <SectionTitle tT="pages.contact.sectionTitle" tBg="pages.contact.titleBg"/>
             {/* DATA */}
             <div className="row">
                 <div className="col-lg-4">

@@ -1,37 +1,40 @@
+import {useTranslation} from "react-i18next";
+
 const ProfileData = () => {
+    const {t} = useTranslation()
     const profileData = [
         [
             {
-                key: 'first name',
+                key: t('pages.about.firstName'),
                 value: 'Marcos'
             }, {
-                key: 'last name',
+                key: t('pages.about.lastName'),
                 value: 'Di Paolo'
             }, {
-                key: 'age',
+                key: t('pages.about.age'),
                 value: '46 years'
             }, {
-                key: 'nationality',
+                key: t('pages.about.nationality'),
                 value: 'Argentine'
             }, {
-                key: 'freelance',
+                key: t('pages.about.freelance'),
                 value: 'Available'
             }
         ], [
             {
-                key: 'address',
+                key: t('pages.about.address'),
                 value: 'Buenos Aires'
             }, {
-                key: 'phone',
+                key: t('pages.about.phone'),
                 value: '+5491141451155'
             }, {
-                key: 'email',
+                key: t('pages.about.email'),
                 value: '{skype}@gmail.com'
             }, {
-                key: 'skype',
+                key: t('pages.about.skype'),
                 value: 'marcosdipaolo'
             }, {
-                key: 'languages',
+                key: t('pages.about.languages'),
                 value: 'Spanish, English'
             }
         ]

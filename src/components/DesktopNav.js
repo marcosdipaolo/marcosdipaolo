@@ -1,13 +1,15 @@
 import {connect} from 'react-redux'
 import {setCurrentPage} from "../actions";
 import {Link} from "react-router-dom";
+import LangChanger from "./LangChanger";
 
 const DesktopNav = props => {
     const links = [
         {to: "/", icon: "home", page: 'home'},
         {to: "/about", icon: "user", page: 'about'},
-        {to: "/portfolio", icon: "briefcase", page: 'portfolio'},
+        {to: "/projects", icon: "briefcase", page: 'projects'},
         {to: "/contact", icon: "envelope-open", page: 'contact'},
+        {to: "/music", icon: "music", page: 'music'},
         {to: "/blog", icon: "comments", page: 'blog'}
     ]
 
@@ -19,6 +21,7 @@ const DesktopNav = props => {
 
     return (
         <div className="desktop-nav d-none d-lg-block w-60 text-center">
+            <LangChanger/>
             <ul className="icons">
                 {links.map(link =>
                     <Link to={link.to} className="position-relative" style={{top: '-2px'}} key={link.to}>

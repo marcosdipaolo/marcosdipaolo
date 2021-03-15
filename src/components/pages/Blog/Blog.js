@@ -5,6 +5,7 @@ import Nav from "./Nav";
 import {Component} from "react";
 import thumbnailResolver from './thumbnailResolver'
 import Spinner from "../../Spinner";
+import SectionTitle from "../../SectionTitle";
 
 class Blog extends Component {
     _embedded;
@@ -20,8 +21,7 @@ class Blog extends Component {
     render() {
         return (
             <div className="posts container px-25 st-list">
-                <h1 className="big d-none d-sm-block pt-75">my <span>blog</span></h1>
-                <p className="title-bg">posts</p>
+                <SectionTitle tT="pages.blog.sectionTitle" tBg="pages.blog.titleBg"/>
                 <div className="position-relative">
                     {!this.props.blog.posts.length ? <Spinner/> : null}
                     <div className="row">

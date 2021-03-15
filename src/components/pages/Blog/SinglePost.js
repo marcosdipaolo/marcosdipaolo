@@ -3,6 +3,7 @@ import {getPost} from "../../../actions";
 import {useEffect} from 'react'
 import PostData from './PostData'
 import Spinner from "../../Spinner";
+import SectionTitle from "../../SectionTitle";
 
 const SinglePost = ({post, match, getPost, currentPage}) => {
     useEffect(() => {
@@ -13,8 +14,7 @@ const SinglePost = ({post, match, getPost, currentPage}) => {
     }, [getPost, match.params.id])
     return (
         <section className="container px-25 single-post pt-25">
-            <h1 className='big d-none d-sm-block mt-60'>my <span>blog</span></h1>
-            <p className="title-bg d-none d-sm-block">posts</p>
+            <SectionTitle tT="pages.blog.sectionTitle" tBg="pages.blog.titleBg"/>
             {(post && post._embedded) ? <PostData post={post}/>
                  :
                 <div className="position-relative" style={{minHeight: '200px'}}>
