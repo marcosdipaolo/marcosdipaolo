@@ -1,32 +1,32 @@
-import '../sass/style.scss'
-import Header from './sections/header/Header'
-import MobileNav from './MobileNav'
-import DesktopNav from './DesktopNav'
-import { Router, Route, Switch } from 'react-router-dom'
-import history from "../history";
-import Home from '../components/pages/Home'
-import Blog from './pages/Blog/Blog'
-import Contact from '../components/pages/Contact'
-import Projects from './pages/Projects'
-import About from './pages/About/About'
-import Music from './pages/Music'
-import ToggleMobileMenu from './sections/header/ToggleMobileMenu'
-import { connect } from 'react-redux'
-import { setCurrentPage } from '../actions'
+import '../sass/style.scss';
+import { Router, Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { useEffect } from 'react';
-import SinglePost from "./pages/Blog/SinglePost";
-import {useTranslation} from 'react-i18next'
+import { useTranslation } from 'react-i18next';
+import Header from './sections/header/Header';
+import MobileNav from './MobileNav';
+import DesktopNav from './DesktopNav';
+import history from '../history';
+import Home from './pages/Home';
+import Blog from './pages/Blog/Blog';
+import Contact from './pages/Contact';
+import Projects from './pages/Projects';
+import About from './pages/About/About';
+import Music from './pages/Music';
+import ToggleMobileMenu from './sections/header/ToggleMobileMenu';
+import { setCurrentPage } from '../actions';
+import SinglePost from './pages/Blog/SinglePost';
 
-const App = ({setCurrentPage, currentPage, currentLanguage}) => {
-  const {t, i18n} = useTranslation()
+const App = ({ setCurrentPage, currentPage, currentLanguage }) => {
+  const { i18n } = useTranslation();
   useEffect(() => {
-    let url = window.location.pathname.substr(1) || 'home'
-    if(url.includes('/')) {
-      url = url.split('/')[0]
+    let url = window.location.pathname.substr(1) || 'home';
+    if (url.includes('/')) {
+      [url] = url.split('/');
     }
-    setCurrentPage(url)
-    i18n.changeLanguage(currentLanguage)
-  }, [setCurrentPage, currentLanguage])
+    setCurrentPage(url);
+    i18n.changeLanguage(currentLanguage);
+  }, [setCurrentPage, currentLanguage, i18n]);
   return (
     <div className="position-relative">
       <ToggleMobileMenu />
@@ -45,14 +45,12 @@ const App = ({setCurrentPage, currentPage, currentLanguage}) => {
         </Switch>
       </Router>
     </div>
-  )
-}
+  );
+};
 
-const mapStateToProps = state => {
-  return {
-    currentPage: state.currentPage,
-    currentLanguage: state.currentLanguage
-  }
-}
+const mapStateToProps = (state) => ({
+  currentPage: state.currentPage,
+  currentLanguage: state.currentLanguage,
+});
 
-export default connect(mapStateToProps, { setCurrentPage })(App)
+export default connect(mapStateToProps, { setCurrentPage })(App);

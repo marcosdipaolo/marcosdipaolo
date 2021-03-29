@@ -1,41 +1,44 @@
-import {connect} from 'react-redux'
-import {getPosts} from '../../../actions'
+import { connect } from 'react-redux';
+import { getPosts } from '../../../actions';
 
-const Nav = props => {
-    const buildListData = () => {
-        const data = []
-        for (let i = 1; i <= props.blog.totalPages; i++) {
-            data.push({
-                number: i,
-                active: props.blog.currentPage === i
-            })
-        }
-        return data
+const Nav = ({ blog, getPosts }) => {
+  const buildListData = () => {
+    const data = [];
+    for (let i = 1; i <= blog.totalPages; i++) {
+      data.push({
+        number: i,
+        active: blog.currentPage === i,
+      });
     }
+    return data;
+  };
 
-    const onClickHandler = n => {
-        props.getPosts(null)
-        props.getPosts(n)
-    }
+  const onClickHandler = (n) => {
+    getPosts(null);
+    getPosts(n);
+  };
 
-    return <ul className="icons blog-nav d-block text-center">
-        {
+  return (
+    <ul className="icons blog-nav d-block text-center">
+      {
             buildListData().map(
-                data =>
-                    <li
-                        onClick={() => onClickHandler(data.number)}
-                        key={data.number}
-                        className={(data.active ? 'active ' : '') + 'mb-10'}
-                    >
-                        {data.number}
-                    </li>
+              (data) => (
+                <li
+                  onClick={() => onClickHandler(data.number)}
+                  key={data.number}
+                  className={`${data.active ? 'active ' : ''}mb-10`}
+                >
+                  {data.number}
+                </li>
+              ),
             )
         }
     </ul>
-}
+  );
+};
 
-const mapStateToProps = state => ({
-    blog: state.blog
-})
+const mapStateToProps = (state) => ({
+  blog: state.blog,
+});
 
-export default connect(mapStateToProps, {getPosts})(Nav)
+export default connect(mapStateToProps, { getPosts })(Nav);

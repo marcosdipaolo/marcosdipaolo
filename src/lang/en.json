@@ -43,6 +43,52 @@
         "contact": "contact",
         "music": "music"
       }
+    },
+    "xp": {
+      "freelance": {
+        "institution": "Freelance",
+        "timeFrame": "08-2017 - 01/2019",
+        "title": "Fullstack Software Developer",
+        "description": "I spent my freelance period developing the full stack of mainly news sites and e-commrce. This was achieved by working with PHP, JS, SCSS, CSS and primarily the Wordpress and Laravel framework depending on the client needs.",
+        "order": 3
+      },
+      "digitalHouse": {
+        "institution": "Digital House",
+        "timeFrame": "01/2019 - 10/2020",
+        "title": "Fullstack Software Developer",
+        "description": "Development and mantaining of their Educational Management System. It was a PHP app built with the Laravel framework and the Doctrine ORM. The challenge was to be able to handle such gigantic App and to modernize it since when Digital House acquired the ownership of the code, the app was really outdated. My job was mostly PHP/Laravel and a tiny bit of NodeJS and VueJS.",
+        "order": 2
+      },
+      "softVision": {
+        "institution": "Cognizant Softvision",
+        "timeFrame": "10/2020 - Present",
+        "title": "Fullstack Software Developer",
+        "description": "In Softvision I oficially became a NodeJS/Typescript developer. At the moment of writing this I'm in charge of buiding Microservices, providing maintainable and scalable code and the ecosystem the app needs. This app will be available in the web, as an iOS and android app. All environments are hosted in AWS and the management with JIRA.",
+        "order": 1
+      }
+    },
+    "education": {
+      "digitalHouse": {
+        "institution": "Digital House",
+        "timeFrame": "07/2018 - 12/2018",
+        "title": "Fullstack Software Developer",
+        "description": "Full stack developent course about the whole process of building an app. The backend side was taught in PHP",
+        "order": 1
+      },
+      "educacionIT": {
+        "institution": "EducacionIT",
+        "timeFrame": "10/2020 - Present",
+        "title": "The Object Oriented Paradigm",
+        "description": "A short course about the principal concepts about Object Oriented Programming.",
+        "order": 2
+      },
+      "cuyoNationalUniversity": {
+        "institution": "Cuyo Nation University",
+        "timeFrame": "03/1998 - 11/2005",
+        "title": "Bachelor's degree in Music",
+        "description": "Completed university degree in Music with specialisation in Guitar",
+        "order": 3
+      }
     }
   }
 }
