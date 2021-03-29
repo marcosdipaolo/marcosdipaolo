@@ -30,5 +30,7 @@ module.exports = {
     'no-plusplus': 'off',
     'no-underscore-dangle': 'off',
     'react/destructuring-assignment': 'off',
+    'import/no-unresolved': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 };

@@ -24,6 +24,8 @@ const App = ({ setCurrentPage, currentPage, currentLanguage }) => {
     if (url.includes('/')) {
       [url] = url.split('/');
     }
+    // eslint-disable-next-line no-console
+    console.log(url);
     setCurrentPage(url);
     i18n.changeLanguage(currentLanguage);
   }, [setCurrentPage, currentLanguage, i18n]);
