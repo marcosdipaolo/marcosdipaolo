@@ -1,6 +1,10 @@
 {
   "translation": {
     "pages": {
+      "home": {
+        "miniCv": "Soy un programador full stack basado en Mendoza, Argentina, enfocado en la implementación de código limpio y mantenible a través de todo el stack de la aplicación. Amo lo que hago y me apasiona aprender sobre ello todo el tiempo.",
+        "moreAboutMe": "mas acerca de mí"
+      },
       "about": {
         "sectionTitle": "<0>quien  <1>soy</1></0>",
         "titleBg": "curriculum",
@@ -15,7 +19,59 @@
         "email": "email",
         "skype": "skype",
         "languages": "idiomas",
-        "downloadCv": "descargar cv"
+        "downloadCv": "descargar cv",
+        "yearsOfExperience": "<0>años de <1>experiencia</1></0>",
+        "completedProjects": "<0>proyectos <1>completados</1></0>",
+        "happyCostumers": "<0>clientes <1>felices</1></0>",
+        "coursesCompleted": "<0>cursos <1>terminados</1></0>",
+        "mySkills": "mis habilidades",
+        "educationAndExperience": "educación y experiencia",
+        "xp": [
+          {
+            "institution": "Freelance",
+            "timeFrame": "08-2017 - 01/2019",
+            "title": "Programador Full Stack",
+            "description": "Mi periodo Freelance consistió en la construcción de aplicaciones completas que mayormente eran o sitios de noticias, o sitios e-commerce. Para esto utilicé PHP con Laravel o Wordpress dependiendo de las necesidades del cliente.",
+            "order": 3
+          },
+          {
+            "institution": "Digital House",
+            "timeFrame": "01/2019 - 10/2020",
+            "title": "Programador Full Stack",
+            "description": "Desarrolo y mantenimiento del Sistema de Gestión Educativa, una  aplicación construída en PHP con el framework Laravel y el ORM doctrine. Consistió en solucionar problemas de desactualización en una aplicación enorme. Mi trabajo fue mayormente PHP/Laravel con algo de NodeJS y de VueJS.",
+            "order": 2
+          },
+          {
+            "institution": "Cognizant Softvision",
+            "timeFrame": "10/2020 - Present",
+            "title": "Programador Full Stack",
+            "description": "En Softvision comencé a trabajar oficialmente con NodeJS/Typescript construyendo microservicion consumidos por una aplicacion web, android e iOS, brindando código mantenible y escalable. Todo el ecosistema está hosteado en AWS y el management con JIRA.",
+            "order": 1
+          }
+        ],
+        "education": [
+          {
+            "institution": "Digital House",
+            "timeFrame": "07/2018 - 12/2018",
+            "title": "Programador Full Stack",
+            "description": "Curso full stack completo e intensivo de 5 meses, acerca de como contruir una web app de principio a fin. HTML, JS, CSS, programación orientada a objetos, agile y SCRUM, un poco de React. El backend fue dictado en PHP.",
+            "order": 1
+          },
+          {
+            "institution": "EducacionIT",
+            "timeFrame": "10/2020 - Present",
+            "title": "Programación Orientada a Objectos",
+            "description": "Curso corto acerca del paradigma de la programación orientada a objectos. Impartido en Java pero aplicable a cualquier lenguaje. Conceptos básicos. Buenas prácticas. Técnias usuales.",
+            "order": 2
+          },
+          {
+            "institution": "Universidad Nacional de Cuyo",
+            "timeFrame": "03/1998 - 11/2005",
+            "title": "Licenciatura en Música, esp: Guitarra",
+            "description": "Completed university degree in Music with specialisation in Guitar",
+            "order": 3
+          }
+        ]
       },
       "blog": {
         "sectionTitle": "<0>mi  <1>blog</1></0>",
@@ -42,52 +98,6 @@
         "home": "inicio",
         "contact": "contacto",
         "music": "música"
-      }
-    },
-    "xp": {
-      "freelance": {
-        "institution": "Freelance",
-        "timeFrame": "08-2017 - 01/2019",
-        "title": "Programador Full Stack",
-        "description": "Mi periodo Freelance consistió en la construcción de aplicaciones completas que mayormente eran o sitios de noticias, o sitios e-commerce. Para esto utilicé PHP con Laravel o Wordpress dependiendo de las necesidades del cliente.",
-        "order": 3
-      },
-      "digitalHouse": {
-        "institution": "Digital House",
-        "timeFrame": "01/2019 - 10/2020",
-        "title": "Programador Full Stack",
-        "description": "Desarrolo y mantenimiento del SGE (Sistema de Gestión Educativa). Esta es una  aplicación construída en PHP con el framework Laravel y el ORM doctrine. El desafío consistió en poder trabajar con una aplicación de tamaño gigante y con graves problemas de desactualización ya que la aplicación estaba muy desactualizada cuando la recibimos. Mi trabajo fue mayormente PHP/Laravel con algo de NodeJS y de VueJS.",
-        "order": 2
-      },
-      "softVision": {
-        "institution": "Cognizant Softvision",
-        "timeFrame": "10/2020 - Present",
-        "title": "Programador Full Stack",
-        "description": "En Softvision me comencé a trabajar oficialmente con NodeJS/Typescript. Al momento de escribir esto estoy trabajando para un cliente que está construyendo una app web, android y iOS. Estas consumen una serie de microservicion de los cuales estoy a cargo, brindando código mantenible y escalable. Todo el ecosistema está hosteado en AWS y el management con JIRA.",
-        "order": 1
-      }
-    },
-    "education": {
-      "digitalHouse": {
-        "institution": "Digital House",
-        "timeFrame": "07/2018 - 12/2018",
-        "title": "Programador Full Stack",
-        "description": "Curso full stack completo e intensivo de 5 meses, acerca de como contruir una web app de principio a fin. El backend  fue dictado en PHP.",
-        "order": 1
-      },
-      "educacionIT": {
-        "institution": "EducacionIT",
-        "timeFrame": "10/2020 - Present",
-        "title": "El Paradigma de la Programación Orientada a Objectos",
-        "description": "Curso corto acerca del paradigma de la programación orientada a objectos",
-        "order": 2
-      },
-      "cuyoNationalUniversity": {
-        "institution": "Universidad Nacional de Cuyo",
-        "timeFrame": "03/1998 - 11/2005",
-        "title": "Licenciatura en Música, esp: Guitarra",
-        "description": "Completed university degree in Music with specialisation in Guitar",
-        "order": 3
       }
     }
   }

@@ -1,18 +1,21 @@
+import { useTranslation } from 'react-i18next';
+
 const Skills = () => {
+  const { t } = useTranslation();
   const devData = [
-    { language: 'html', percent: 25 },
-    { language: 'javascript', percent: 89 },
-    { language: 'css', percent: 70 },
-    { language: 'php', percent: 66 },
-    { language: 'wordpress', percent: 95 },
-    { language: 'jQuery', percent: 50 },
-    { language: 'angular', percent: 65 },
-    { language: 'react', percent: 45 },
+    { language: 'nodejs', percent: 80 },
+    { language: 'javascript', percent: 85 },
+    { language: 'css', percent: 95 },
+    { language: 'php', percent: 90 },
+    { language: 'wordpress', percent: 75 },
+    { language: 'typescript', percent: 85 },
+    { language: 'scss', percent: 70 },
+    { language: 'react', percent: 70 },
   ];
   return (
     <div className="row skills">
       <div className="col-12">
-        <h3 className="col-12 text-upper my-50">my skills</h3>
+        <h3 className="col-12 text-upper my-50">{t('pages.about.mySkills')}</h3>
       </div>
       {devData.map((data) => (
         <div className="col-6 col-md-3 mb-30" key={data.language}>

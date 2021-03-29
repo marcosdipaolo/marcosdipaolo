@@ -92,7 +92,7 @@ section.about {
 
     .educ-xp {
         ul {
-            li {
+            li.resume-item {
                 .icon {
                     left: 0;
                     border-radius: 50%;
@@ -124,8 +124,9 @@ section.about {
                         }
                     }
                 }
-                p {
+                p.description {
                     color: #eee;
+                    min-height: 90px;
                 }
                 &::after {
                     content: "";
