@@ -1,6 +1,5 @@
 import { withTranslation } from 'react-i18next';
 import { Component } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
 import mailSender from '../../../apis/blackend';
 
 export class ConctactForm extends Component {
