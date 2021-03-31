@@ -2,6 +2,7 @@
   "translation": {
     "pages": {
       "home": {
+        "im": "soy",
         "miniCv": "Soy un programador full stack basado en Mendoza, Argentina, enfocado en la implementación de código limpio y mantenible a través de todo el stack de la aplicación. Amo lo que hago y me apasiona aprender sobre ello todo el tiempo.",
         "moreAboutMe": "mas acerca de mí"
       },
@@ -79,7 +80,20 @@
       },
       "contact": {
         "sectionTitle": "<0>escribí  <1>me</1></0>",
-        "titleBg": "contacto"
+        "titleBg": "contacto",
+        "sendMessage": "enviar mensaje",
+        "dontBeShy": "no seas tímido",
+        "engagementText": "Sentite libre de ponerte en contacto conmigo. Esty siempre dispuesto a ecuchar nuevos proyectos, ideas creativas u oportunidades para ser parte de tu vision.",
+        "mailMe": "escribime",
+        "callMe": "llamame",
+        "form": {
+          "yourName": "TU NOMBRE",
+          "yourEmail": "TU EMAIL",
+          "theSubject": "EL ASUNTO",
+          "yourMessage": "TU MENSAJE"
+        },
+        "notificationSuccess": "Tu mensaje se envió con éxito",
+        "notificationError": "Tuvimos un problema enviando tu mensaje: \n"
       },
       "music": {
         "sectionTitle": "<0>mi  <1>música</1></0>",

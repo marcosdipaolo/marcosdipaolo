@@ -9,7 +9,6 @@ import reducers from './reducers';
 import './i18n';
 
 const store = createStore(reducers, applyMiddleware(thunk));
-
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

@@ -43,7 +43,7 @@ const MobileNav = ({
         <li onClick={() => clickHandler('contact')} className={`${active('contact')}py-14`}>
           <Link to="/contact">
             <span><i className="fa fa-envelope-open" /></span>
-            <span className="d-inline-block ml-18">{t('nav.items.contact')}</span>
+            <span className="d-inline-block ml-18">{t('nav.items.Contact')}</span>
           </Link>
         </li>
         <li onClick={() => clickHandler('music')} className={`${active('music')}py-14`}>

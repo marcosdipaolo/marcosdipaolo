@@ -2,6 +2,7 @@
   "translation": {
     "pages": {
       "home": {
+        "im": "i'm",
         "miniCv": "I'm an Argentinean based fullstack developer focused on crafting clean & maintainable code across the full stack of an app. I am passionate about what I do and I love learning all the time about it.",
         "moreAboutMe": "more about me"
       },
@@ -79,7 +80,20 @@
       },
       "contact": {
         "sectionTitle": "<0>get in <1>touch</1></0>",
-        "titleBg": "contact"
+        "titleBg": "contact",
+        "sendMessage": "send message",
+        "dontBeShy": "don't be shy",
+        "engagementText": "Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
+        "mailMe": "mail me",
+        "callMe": "call me",
+        "form": {
+          "yourName": "YOUR NAME",
+          "yourEmail": "YOUR EMAIL",
+          "theSubject": "THE SUBJECT",
+          "yourMessage": "YOUR MESSAGE"
+        },
+        "notificationSuccess": "Your message was delivered",
+        "notificationError": "We had a problem delivering your message: \n"
       },
       "music": {
         "sectionTitle": "<0>my  <1>music</1></0>",

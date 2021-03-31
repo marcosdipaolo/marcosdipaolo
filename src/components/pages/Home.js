@@ -21,8 +21,11 @@ const Home = (props) => {
             <img src="/images/portrait-mobile.jpg" alt="" className="w-280 d-none d-sm-inline-block d-lg-none" />
             <h6 className="d-block d-sm-none text-upper">hi there!</h6>
             <h1 className="mt-sm-4 mt-lg-0 mb-10">
-              I&apos;m
-              <span> Marcos Di Paolo</span>
+              {t('pages.home.im')}
+              <span>
+                {' '}
+                Marcos Di Paolo
+              </span>
             </h1>
             <p className=" lh-32">
               {t('pages.home.miniCv')}

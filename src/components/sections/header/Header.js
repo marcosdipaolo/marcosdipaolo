@@ -17,7 +17,7 @@ const Header = (props) => {
             <span>projects</span>
           </h1>
         );
-      case 'contact':
+      case 'Contact':
         return (
           <h1>
             get in

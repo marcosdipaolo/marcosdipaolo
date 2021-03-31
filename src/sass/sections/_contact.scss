@@ -15,5 +15,13 @@ section.contact {
             opacity: .8;
         }
     }
-
+    .contact-form {
+        .notification {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            min-height: 80px;
+            transition: opacity 300ms;
+        }
+    }
 }

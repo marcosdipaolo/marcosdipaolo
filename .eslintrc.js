@@ -7,9 +7,11 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb',
   ],
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
+      classes: true,
     },
     ecmaVersion: 12,
     sourceType: 'module',
@@ -32,5 +34,8 @@ module.exports = {
     'react/destructuring-assignment': 'off',
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'react/prefer-stateless-function': 'off',
+    'react/state-in-constructor': 'off',
+    'no-console': 'off',
   },
 };
