@@ -14,7 +14,7 @@ const Playlist = ({ tKey, playingTrack }) => {
     >
       <div className={`playlist-toggle text-center fs-30${playlistOpened ? ' opened' : ''}`}>
         <i
-          style={{ display: playlistOpened ? 'none' : 'block' }}
+          style={{ display: playlistOpened ? 'none' : 'inline' }}
           onClick={(e) => {
             e.stopPropagation();
             setPlaylistOpened(true);
@@ -22,7 +22,7 @@ const Playlist = ({ tKey, playingTrack }) => {
           className="fa fa-angle-up "
         />
         <i
-          style={{ display: !playlistOpened ? 'none' : 'block' }}
+          style={{ display: !playlistOpened ? 'none' : 'inline' }}
           onClick={(e) => {
             e.stopPropagation();
             setPlaylistOpened(false);

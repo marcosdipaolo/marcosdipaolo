@@ -17,7 +17,7 @@ class Blog extends Component {
       <section className="posts container px-25 st-list">
         <SectionTitle tT="pages.blog.sectionTitle" tBg="pages.blog.titleBg" />
         <div className="position-relative">
-          {!this.props.blog.posts.length ? <Spinner /> : null}
+          {!this.props.blog.posts.length ? <div style={{ minHeight: '200px' }}><Spinner /></div> : null}
           <div className="row">
             {
                             this.props.blog.posts.map((post) => (

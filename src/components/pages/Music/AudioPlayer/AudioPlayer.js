@@ -11,6 +11,7 @@ const AudioPlayer = ({
   tKey, closeHandler, playingTrack, setPlayingTrack,
 }) => {
   const [volume, setVolume] = useState(70);
+  const [progress, setProgress] = useState(0);
   const [audioEl, setAudioEl] = useState(null);
   const [playing, setPlaying] = useState(false);
   const toggle = () => {
@@ -30,36 +31,43 @@ const AudioPlayer = ({
     setPlayingTrack(musicData[tKey][playingTrack.order]);
   };
 
+  const timeUpdateHandler = (e) => {
+    if (playingTrack.key === tKey) {
+      setProgress((e.target.currentTime * 100) / e.target.duration);
+    }
+  };
+
   useEffect(() => {
     if (audioEl) {
       audioEl.addEventListener('playing', () => {
         setPlaying(true);
       });
       audioEl.addEventListener('ended', endedHandler);
-      // audioEl.addEventListener('timeupdate', endedHandler);
-      try {
-        playing ? audioEl.play() : audioEl.pause();
-      } catch (e) {
-        console.log(e);
-      }
+      audioEl.addEventListener('timeupdate', timeUpdateHandler);
+      playing ? audioEl.play().catch(() => {}) : audioEl.pause();
     } else {
       setPlaying(false);
     }
+    return () => {
+      if (audioEl) {
+        audioEl.removeEventListener('ended', endedHandler);
+        audioEl.removeEventListener('timeupdate', timeUpdateHandler);
+      }
+    };
   },
   [playing, audioEl]);
 
   useEffect(() => {
     setAudioEl(document.getElementById(`playing-track-${tKey}`));
-    if (audioEl) {
-      if (playingTrack) {
-        try {
-          audioEl.play().then(() => setVolume(70));
-        } catch (e) {
-          console.log(e);
-        }
+    if (playingTrack) {
+      if (playingTrack.key !== tKey) {
+        setAudioEl(null);
+      }
+      if (audioEl) {
+        audioEl.play().then(() => setVolume(70)).catch(() => {});
       } else {
-        audioEl.pause();
         setPlaying(false);
+        setProgress(0);
       }
     }
   }, [playingTrack, audioEl]);
@@ -73,11 +81,22 @@ const AudioPlayer = ({
 
   const title = ((playingTrack && playingTrack.key === tKey) ? playingTrack.title : '');
 
+  const onClickProgress = (e) => {
+    const width = document.querySelector(`.progress.${tKey}`).offsetWidth;
+    if (width && audioEl) {
+      const { target } = e;
+      const rect = target.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const { duration } = audioEl;
+      audioEl.currentTime = (duration * x) / width;
+    }
+  };
+
   return (
     <section className={`audio-player ${tKey}`}>
       <i onClick={closeHandler} className="fa fa-arrow-left close" />
       <div className="image" style={{ backgroundImage: `url(${covers[tKey]})` }} />
-      <ProgressBar width={25} />
+      <ProgressBar tKey={tKey} width={progress} onClickProgress={onClickProgress} />
       <br />
       <div className="play">
         <i

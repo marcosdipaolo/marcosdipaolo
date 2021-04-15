@@ -18,12 +18,12 @@ const Engage = () => {
       </p>
       <ul className="icons mb-50">
         <li className="w-40 fs-18 pt-5 mr-20 text-center h-40 d-inline-block">
-          <a href="https://github.com/marcosdipaolo">
+          <a target="_blank" href="https://github.com/marcosdipaolo" rel="noreferrer">
             <i className="fa fa-github" />
           </a>
         </li>
         <li className="w-40 fs-18 pt-5 mr-20 text-center h-40 d-inline-block">
-          <a href="https://www.linkedin.com/in/marcos-di-paolo/">
+          <a target="_blank" href="https://www.linkedin.com/in/marcos-di-paolo/" rel="noreferrer">
             <i className="fa fa-linkedin" />
           </a>
         </li>

@@ -2,7 +2,7 @@
 
 .audio-player {
     position: relative;
-    background-color: #252525;
+    background-color: #222;
     height: 360px;
     border-radius: 5px;
 
@@ -11,7 +11,8 @@
         top: 10px;
         right: 10px;
         cursor: pointer;
-        color: $primary;
+        color: #333;
+        font-size: 18px;
     }
 
     .image {
@@ -34,7 +35,8 @@
 
     .progress {
         border-radius: unset;
-        height: 3px;
+        height: 5px;
+        cursor: pointer;
 
         .progress-bar {
             background-color: $primary;
@@ -56,10 +58,12 @@
     .volume {
         display: flex;
         justify-content: space-evenly;
+
         i {
             &.fa-volume-up {
                 margin: 12px 12px 12px 0;
             }
+
             &.fa-volume-down {
                 margin: 12px 0 12px 12px;
             }
@@ -68,23 +72,34 @@
 
     .playlist {
         transition: all 300ms ease-in-out;
+        margin-top: -10px;
+
         .playlist-toggle {
+            margin-bottom: 20px;
+
             i {
                 color: #ddd;
             }
+
             &.opened i {
-                color: $primary;
+                color: #333;
+                background-color: rgba(255, 255, 255, .5);
+                border-radius: 50%;
+                padding: 0 5px;
             }
         }
+
         .tracks {
             padding-top: 1px;
             background-color: #111;
 
             .track {
                 border-bottom: 1px solid #252525;
+
                 &.active {
                     color: $primary;
                 }
+
                 p.track-line {
                     padding: 0 5px;
                     font-size: 13px;
@@ -113,7 +128,7 @@
         }
 
         &.opened {
-            transform: translateY(-150px);
+            transform: translateY(-182px);
         }
     }
 }
