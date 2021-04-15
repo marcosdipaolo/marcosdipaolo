@@ -28,7 +28,7 @@ const music = [
     image: sures,
   },
 ];
-
+// un pequeño comentario
 const Music = () => (
   <section className="music container px-20 pt-50">
     <SectionTitle tT="pages.music.sectionTitle" tBg="pages.music.titleBg" />
