@@ -1,10 +1,9 @@
 const Notification = ({ status, show, message }) => (
   <div
-    className="notification px-20"
+    className={`notification px-20 ${show ? 'visible' : ''}`}
     style={{
       // eslint-disable-next-line no-nested-ternary
       backgroundColor: status === 'success' ? '#00807a9e' : '#ff000066',
-      opacity: show ? '1' : '0',
       display: 'flex',
     }}
   >

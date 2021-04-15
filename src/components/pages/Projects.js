@@ -1,9 +1,9 @@
 import SectionTitle from '../SectionTitle';
 
 const Projects = () => (
-  <div>
+  <section>
     <SectionTitle tT="pages.projects.sectionTitle" tBg="pages.projects.titleBg" />
-  </div>
+  </section>
 );
 
 export default Projects;

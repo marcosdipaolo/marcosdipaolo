@@ -37,5 +37,7 @@ module.exports = {
     'react/prefer-stateless-function': 'off',
     'react/state-in-constructor': 'off',
     'no-console': 'off',
+    'jsx-a11y/media-has-caption': 'off',
+    'no-unused-expressions': 'off',
   },
 };

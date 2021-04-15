@@ -12,13 +12,17 @@ import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
 import Projects from './pages/Projects';
 import About from './pages/About/About';
-import Music from './pages/Music';
+import Music from './pages/Music/Music';
 import ToggleMobileMenu from './sections/header/ToggleMobileMenu';
 import { setCurrentPage } from '../actions';
 import SinglePost from './pages/Blog/SinglePost';
+import PlayingInfo from './PlayingInfo';
 
-const App = ({ setCurrentPage, currentPage, currentLanguage }) => {
+const App = ({
+  setCurrentPage, currentPage, currentLanguage, playingTrack,
+}) => {
   const { i18n } = useTranslation();
+
   useEffect(() => {
     let url = window.location.pathname.substr(1) || 'home';
     if (url.includes('/')) {
@@ -27,8 +31,11 @@ const App = ({ setCurrentPage, currentPage, currentLanguage }) => {
     setCurrentPage(url);
     i18n.changeLanguage(currentLanguage);
   }, [setCurrentPage, currentLanguage, i18n]);
+
   return (
-    <div className="position-relative">
+    <div id="App" className="position-relative">
+      <PlayingInfo />
+      <audio id={`playing-track-${playingTrack ? playingTrack.key : ''}`} src={playingTrack ? playingTrack.audio : null} />
       <ToggleMobileMenu />
       {currentPage !== 'home' ? <Header /> : ''}
       <Router history={history}>
@@ -51,6 +58,7 @@ const App = ({ setCurrentPage, currentPage, currentLanguage }) => {
 const mapStateToProps = (state) => ({
   currentPage: state.currentPage,
   currentLanguage: state.currentLanguage,
+  playingTrack: state.playingTrack,
 });
 
 export default connect(mapStateToProps, { setCurrentPage })(App);

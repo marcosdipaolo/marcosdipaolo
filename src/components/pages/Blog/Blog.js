@@ -14,7 +14,7 @@ class Blog extends Component {
 
   render() {
     return (
-      <div className="posts container px-25 st-list">
+      <section className="posts container px-25 st-list">
         <SectionTitle tT="pages.blog.sectionTitle" tBg="pages.blog.titleBg" />
         <div className="position-relative">
           {!this.props.blog.posts.length ? <Spinner /> : null}
@@ -33,7 +33,7 @@ class Blog extends Component {
           </div>
           <Nav />
         </div>
-      </div>
+      </section>
     );
   }
 }

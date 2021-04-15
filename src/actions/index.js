@@ -1,5 +1,5 @@
 import {
-  MENU_MOBILE_TOGGLE, CURRENT_PAGE, GET_POSTS, GET_POST, CHANGE_LANGUAGE,
+  MENU_MOBILE_TOGGLE, CURRENT_PAGE, GET_POSTS, GET_POST, CHANGE_LANGUAGE, SET_PLAYING_TRACK,
 } from '../reducers/types';
 import blog from '../apis/blog';
 
@@ -58,4 +58,9 @@ export const getPosts = (page) => async (dispatch, getState) => {
 export const changeLanguage = (lang) => ({
   type: CHANGE_LANGUAGE,
   payload: lang,
+});
+
+export const setPlayingTrack = (track) => ({
+  type: SET_PLAYING_TRACK,
+  payload: track,
 });

@@ -97,7 +97,18 @@
       },
       "music": {
         "sectionTitle": "<0>my  <1>music</1></0>",
-        "titleBg": "albums"
+        "titleBg": "albums",
+        "albums": {
+          "piedras": {
+            "info": "Piedras del Agua's Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla pellentesque consequat. Vivamus placerat semper congue. In rhoncus orci eget diam rutrum malesuada. Phasellus tristique, purus at dignissim varius, lectus leo cursus est, eu convallis lorem dolor efficitur risus. In porta ipsum in nunc ornare, in fermentum lacus bibendum. Cras sit amet mi suscipit, venenatis sem non, interdum nisi. Fusce aliquam facilisis diam, eget gravida ipsum faucibus quis. Maecenas diam dui, pharetra in velit at, ultrices consequat lacus."
+          },
+          "sures": {
+            "info": "Sures's info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla pellentesque consequat. Vivamus placerat semper congue. In rhoncus orci eget diam rutrum malesuada. Phasellus tristique, purus at dignissim varius, lectus leo cursus est, eu convallis lorem dolor efficitur risus. In porta ipsum in nunc ornare, in fermentum lacus bibendum. Cras sit amet mi suscipit, venenatis sem non, interdum nisi. Fusce aliquam facilisis diam, eget gravida ipsum faucibus quis. Maecenas diam dui, pharetra in velit at, ultrices consequat lacus."
+          },
+          "arbolito": {
+            "info": "Arbolito dle querer's info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla pellentesque consequat. Vivamus placerat semper congue. In rhoncus orci eget diam rutrum malesuada. Phasellus tristique, purus at dignissim varius, lectus leo cursus est, eu convallis lorem dolor efficitur risus. In porta ipsum in nunc ornare, in fermentum lacus bibendum. Cras sit amet mi suscipit, venenatis sem non, interdum nisi. Fusce aliquam facilisis diam, eget gravida ipsum faucibus quis. Maecenas diam dui, pharetra in velit at, ultrices consequat lacus."
+          }
+        }
       },
       "projects": {
         "sectionTitle": "<0>my  <1>proyects</1></0>",
