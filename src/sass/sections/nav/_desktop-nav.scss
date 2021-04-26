@@ -1,18 +1,20 @@
 .desktop-nav {
-  position: fixed;
-  top: calc((100vh / 2) - (460px / 2));
-  right: 10px;
+    position: fixed;
+    top: calc((100vh / 2) - (460px / 2));
+    right: 10px;
+    z-index: 2;
 }
 
 ul.icons {
-  padding-left: 0;
-  margin-top: 20px;
+    padding-left: 0;
+    margin-top: 20px;
 
-  li {
-    background-color: #333;
-    border-radius: 50%;
-    &.active {
-      background-color: $primary;
+    li {
+        background-color: #333;
+        border-radius: 50%;
+
+        &.active {
+            background-color: $primary;
+        }
     }
-  }
 }

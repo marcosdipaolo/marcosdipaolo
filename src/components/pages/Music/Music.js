@@ -30,20 +30,22 @@ const music = [
 ];
 // un pequeño comentario
 const Music = () => (
-  <section className="music container px-20">
-    <SectionTitle tT="pages.music.sectionTitle" tBg="pages.music.titleBg" />
-    <div className="row">
-      <div className="offset-md-1 col-lg-10">
-        <div className="row">
-          {music.map((data) => (
-            <Album
-              title={data.title}
-              subTitle={data.subTitle}
-              thumb={data.image}
-              tKey={data.key}
-              key={data.key}
-            />
-          ))}
+  <section className="music container-fluid position-absolute px-20">
+    <div className="container">
+      <SectionTitle tT="pages.music.sectionTitle" tBg="pages.music.titleBg" />
+      <div className="row">
+        <div className="offset-md-1 col-lg-10">
+          <div className="row">
+            {music.map((data) => (
+              <Album
+                title={data.title}
+                subTitle={data.subTitle}
+                thumb={data.image}
+                tKey={data.key}
+                key={data.key}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

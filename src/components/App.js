@@ -46,8 +46,8 @@ const App = ({
         <DesktopNav />
         <Route render={({ location }) => (
           <TransitionGroup>
-            <CSSTransition classNames="fade" timeout={{ enter: 200, exit: 300 }} key={location.key}>
-              <Switch>
+            <CSSTransition classNames="fade" timeout={300} key={location.key}>
+              <Switch location={location}>
                 <Route path="/" exact component={Home} />
                 <Route path="/about" exact component={About} />
                 <Route path="/blog" exact component={Blog} />

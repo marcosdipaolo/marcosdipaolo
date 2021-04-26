@@ -9,16 +9,20 @@ const Home = (props) => {
     props.setCurrentPage(page);
   };
   return (
-    <section className="container-fluid home p-25">
+    <section className="container-fluid home p-25 position-absolute">
       <div className="d-none d-lg-block color-block position-fixed" />
       <div className="row">
-        <div
-          className="col-lg-4 bg position-fixed d-none d-lg-block img"
-          style={{ backgroundImage: 'url(/images/portrait_big.jpg)' }}
-        />
+        {/* <div */}
+        {/*  className="col-lg-4 bg position-fixed d-none d-lg-block img" */}
+        {/*  style={{ backgroundImage: 'url(/images/portrait_big.jpg)' }} */}
+        {/* /> */}
         <div className="content col-12 col-lg-8 offset-lg-4 text-left text-sm-center text-lg-start d-flex">
           <div className="text m-auto p-10">
-            <img src="/images/portrait-mobile.jpg" alt="" className="w-280 d-none d-sm-inline-block d-lg-none" />
+            {/* <img */}
+            {/*  src="/images/portrait-mobile.jpg" */}
+            {/*  alt="" */}
+            {/*  className="w-280 d-none d-sm-inline-block d-lg-none" */}
+            {/* /> */}
             <h6 className="d-block d-sm-none text-upper">hi there!</h6>
             <h1 className="mt-sm-4 mt-lg-0 mb-10">
               {t('pages.home.im')}

@@ -48,17 +48,24 @@ body {
     clear: both;
 }
 
+section {
+    opacity: 0;
+}
+
 .fade-enter {
     opacity: 0;
 }
+.fade-enter-done {
+    opacity: 1;
+}
 .fade-enter-active {
     opacity: 1;
-    transition: opacity 200ms;
+    transition: opacity 300ms;
 }
 .fade-exit {
     opacity: 1;
 }
 .fade-exit-active {
     opacity: 0;
-    transition: opacity 200ms;
+    transition: opacity 300ms;
 }

@@ -3,7 +3,7 @@ import ContactForm from './ContactForm';
 import Engage from './Engage';
 
 const Contact = () => (
-  <section className="container-fluid contact">
+  <section className="container-fluid contact position-absolute">
     <SectionTitle tT="pages.contact.sectionTitle" tBg="pages.contact.titleBg" />
     <div className="container">
       <div className="row">
