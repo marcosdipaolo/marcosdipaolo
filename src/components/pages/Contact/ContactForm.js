@@ -51,8 +51,13 @@ export class ConctactForm extends Component {
       name, email, subject, message,
     } = this.state;
     this.setState({ loading: true });
-    mailSender.post(`/api/mail?api_token=${process.env.REACT_APP_API_TOKEN}`, {
+    console.log('token: ', process.env.REACT_APP_API_TOKEN, 'url: ', process.env.REACT_APP_BACKEND_URL);
+    mailSender.post('/api/mail', {
       name, email, subject, message,
+    }, {
+      params: {
+        api_token: process.env.REACT_APP_API_TOKEN,
+      },
     }).then((response) => {
       this.clearForm();
       this.setState({ loading: false });
