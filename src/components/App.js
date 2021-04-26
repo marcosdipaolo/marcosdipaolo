@@ -1,8 +1,11 @@
 import '../sass/style.scss';
-import { Router, Route, Switch } from 'react-router-dom';
+import {
+  Router, Route, Switch,
+} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Header from './sections/header/Header';
 import MobileNav from './MobileNav';
 import DesktopNav from './DesktopNav';
@@ -41,15 +44,22 @@ const App = ({
       <Router history={history}>
         <MobileNav />
         <DesktopNav />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" exact component={About} />
-          <Route path="/blog" exact component={Blog} />
-          <Route path="/blog/:id" exact component={SinglePost} />
-          <Route path="/contact" exact component={Contact} />
-          <Route path="/projects" exact component={Projects} />
-          <Route path="/music" exact component={Music} />
-        </Switch>
+        <Route render={({ location }) => (
+          <TransitionGroup>
+            <CSSTransition classNames="fade" timeout={{ enter: 200, exit: 300 }} key={location.key}>
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/about" exact component={About} />
+                <Route path="/blog" exact component={Blog} />
+                <Route path="/blog/:id" exact component={SinglePost} />
+                <Route path="/contact" exact component={Contact} />
+                <Route path="/projects" exact component={Projects} />
+                <Route path="/music" exact component={Music} />
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
+        )}
+        />
       </Router>
     </div>
   );

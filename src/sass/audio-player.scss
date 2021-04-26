@@ -92,6 +92,8 @@
         .tracks {
             padding-top: 1px;
             background-color: #111;
+            max-height: 150px;
+            overflow-y: scroll;
 
             .track {
                 border-bottom: 1px solid #252525;

@@ -16,48 +16,27 @@ const MobileNav = ({
     setCurrentPage(page);
   };
   const active = (page) => (page === currentPage ? 'active ' : '');
+  const menuData = [
+    { page: 'home', icon: 'home', url: '/' },
+    { page: 'about', icon: 'user', url: '/about' },
+    { page: 'contact', icon: 'envelope-open', url: '/contact' },
+    { page: 'music', icon: 'music', url: '/music' },
+    { page: 'blog', icon: 'comments', url: '/blog' },
+  ];
   return (
     <nav className={`${mobileMenuOpened ? 'opened ' : ''}d-lg-none pt-20`}>
       <h2 className="fw-600 text-center">
         <LangChanger />
       </h2>
       <ul className="p-25 pt-50 mobile-nav list-unstyled list-group text-upper">
-        <li onClick={() => clickHandler('home')} className={`${active('home')}pb-14`}>
-          <Link to="/">
-            <span><i className="fa fa-home" /></span>
-            <span className="d-inline-block ml-20">{t('nav.items.home')}</span>
-          </Link>
-        </li>
-        <li onClick={() => clickHandler('about')} className={`${active('about')}py-14`}>
-          <Link to="/about">
-            <span><i className="fa fa-user" /></span>
-            <span className="d-inline-block ml-23">{t('nav.items.about')}</span>
-          </Link>
-        </li>
-        <li onClick={() => clickHandler('projects')} className={`${active('projects')}py-14`}>
-          <Link to="/projects">
-            <span><i className="fa fa-folder-open" /></span>
-            <span className="d-inline-block ml-17">{t('nav.items.projects')}</span>
-          </Link>
-        </li>
-        <li onClick={() => clickHandler('contact')} className={`${active('contact')}py-14`}>
-          <Link to="/contact">
-            <span><i className="fa fa-envelope-open" /></span>
-            <span className="d-inline-block ml-18">{t('nav.items.Contact')}</span>
-          </Link>
-        </li>
-        <li onClick={() => clickHandler('music')} className={`${active('music')}py-14`}>
-          <Link to="/music">
-            <span><i className="fa fa-music" /></span>
-            <span className="d-inline-block ml-18">{t('nav.items.music')}</span>
-          </Link>
-        </li>
-        <li onClick={() => clickHandler('blog')} className={`${active('blog')}py-14`}>
-          <Link to="/blog">
-            <span><i className="fa fa-comments" /></span>
-            <span className="d-inline-block ml-20">{t('nav.items.blog')}</span>
-          </Link>
-        </li>
+        {menuData.map((item) => (
+          <li onClick={() => clickHandler(item.page)} className={`${active(item.page)}pb-14`} key={item.page}>
+            <Link to={item.url}>
+              <span><i className={`fa fa-${item.icon}`} /></span>
+              <span className="d-inline-block ml-20">{t(`nav.items.${item.page}`)}</span>
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

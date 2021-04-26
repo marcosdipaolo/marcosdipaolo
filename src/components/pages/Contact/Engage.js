@@ -4,6 +4,7 @@ const Engage = () => {
   const { t } = useTranslation();
   return (
     <div>
+      <br className="d-sm-none" />
       <h3 className="text-upper mb-20">{t('pages.contact.dontBeShy')}</h3>
       <p className="fs-14">{t('pages.contact.engagementText')}</p>
       <p className="position-relative fs-14 my-20 px-50">

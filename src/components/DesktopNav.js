@@ -7,8 +7,7 @@ const DesktopNav = (props) => {
   const links = [
     { to: '/', icon: 'home', page: 'home' },
     { to: '/about', icon: 'user', page: 'about' },
-    { to: '/projects', icon: 'briefcase', page: 'projects' },
-    { to: '/contact', icon: 'envelope-open', page: 'Contact' },
+    { to: '/contact', icon: 'envelope-open', page: 'contact' },
     { to: '/music', icon: 'music', page: 'music' },
     { to: '/blog', icon: 'comments', page: 'blog' },
   ];

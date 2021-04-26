@@ -61,14 +61,16 @@ export class ConctactForm extends Component {
       }
     }).catch((error) => {
       this.setState({ loading: false });
-      const { errors } = error.response.data;
-      const text = errors[Object.keys(errors)[0]][0];
-      this.showNotification('error', (
-        <span>
-          {this.props.t('pages.contact.notificationError')}
-          <br />
-          {text}
-        </span>));
+      const errors = (error.response && error.response.data) ? error.response.data.errors : null;
+      if (errors) {
+        const text = errors[Object.keys(errors)[0]][0];
+        this.showNotification('error', (
+          <span>
+            {this.props.t('pages.contact.notificationError')}
+            <br />
+            {text}
+          </span>));
+      }
     });
   }
 

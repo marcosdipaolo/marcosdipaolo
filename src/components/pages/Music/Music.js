@@ -30,7 +30,7 @@ const music = [
 ];
 // un pequeño comentario
 const Music = () => (
-  <section className="music container px-20 pt-50">
+  <section className="music container px-20">
     <SectionTitle tT="pages.music.sectionTitle" tBg="pages.music.titleBg" />
     <div className="row">
       <div className="offset-md-1 col-lg-10">

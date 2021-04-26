@@ -16,6 +16,7 @@ nav {
         font-size: 26px;
     }
     .mobile-nav {
+        z-index: 4;
         height: 100%;   
         -webkit-font-smoothing: antialiased;
         li {
@@ -38,6 +39,7 @@ nav {
 .toggle-menu {
     z-index: 2;
     top: 15px;
+    cursor: pointer;
     span {
         background-color: #fff;
         height: 2px;

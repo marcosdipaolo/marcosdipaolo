@@ -7,35 +7,35 @@ const Header = (props) => {
         return (
           <h1>
             about
-            <span>me</span>
+            <span> me</span>
           </h1>
         );
       case 'projects':
         return (
           <h1>
             my
-            <span>projects</span>
+            <span> projects</span>
           </h1>
         );
-      case 'Contact':
+      case 'contact':
         return (
           <h1>
             get in
-            <span>touch</span>
+            <span> touch</span>
           </h1>
         );
       case 'music':
         return (
           <h1>
             my
-            <span>music</span>
+            <span> music</span>
           </h1>
         );
       case 'blog':
         return (
           <h1>
             my
-            <span>blog</span>
+            <span> blog</span>
           </h1>
         );
       default:

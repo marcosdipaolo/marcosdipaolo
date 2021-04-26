@@ -55,7 +55,7 @@ const AudioPlayer = ({
       }
     };
   },
-  [playing, audioEl]);
+  [playing, audioEl, playingTrack]);
 
   useEffect(() => {
     setAudioEl(document.getElementById(`playing-track-${tKey}`));
