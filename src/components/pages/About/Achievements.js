@@ -1,7 +1,7 @@
 import { Trans } from 'react-i18next';
 
 const Achievements = () => (
-  <div className="achievements col-12 col-lg-7 col-xl-6">
+  <div className="achievements col-12 col-lg-7 col-xl-5">
     <div className="row">
       <div className="col-6">
         <div className="stats mb-30 pl-30 py-20 rounded">

@@ -13,13 +13,13 @@ const ProfileData = ({ currentLanguage }) => {
         value: 'Di Paolo',
       }, {
         key: t('pages.about.age'),
-        value: '46 years',
+        value: `46 ${t('pages.about.years')}`,
       }, {
         key: t('pages.about.nationality'),
-        value: 'Argentine',
+        value: t('pages.about.argentine'),
       }, {
         key: t('pages.about.freelance'),
-        value: 'Available',
+        value: t('pages.about.available'),
       },
     ],
     secondColumn: [
@@ -31,7 +31,7 @@ const ProfileData = ({ currentLanguage }) => {
         value: '+5491141451155',
       }, {
         key: t('pages.about.email'),
-        value: '{my-skype-user}@gmail.com',
+        value: `{${t('pages.about.mySkypeUser')}}@gmail.com`,
       }, {
         key: t('pages.about.skype'),
         value: 'marcosdipaolo',
