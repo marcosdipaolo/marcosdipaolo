@@ -81,7 +81,11 @@
       },
       "blog": {
         "sectionTitle": "<0>mi  <1>blog</1></0>",
-        "titleBg": "artículos"
+        "titleBg": "artículos",
+        "categories": {
+          "development": "desarrollo",
+          "music": "música"
+        }
       },
       "contact": {
         "sectionTitle": "<0>escribi  <1>me</1></0>",

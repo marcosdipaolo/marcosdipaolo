@@ -81,7 +81,11 @@
       },
       "blog": {
         "sectionTitle": "<0>my  <1>blog</1></0>",
-        "titleBg": "posts"
+        "titleBg": "posts",
+        "categories": {
+          "development": "development",
+          "music": "music"
+        }
       },
       "contact": {
         "sectionTitle": "<0>get in <1>touch</1></0>",

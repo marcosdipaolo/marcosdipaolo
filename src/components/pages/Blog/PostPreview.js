@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const PostPreview = ({
-  content, id, thumb, title,
+  content, id, thumb, title, cat,
 }) => {
   const parseContent = () => {
     const tmp = document.createElement('DIV');
@@ -12,7 +12,9 @@ const PostPreview = ({
     <div className="post col-12 col-md-6 mt-30 col-xl-4 mb-30">
       <article style={{ height: '100%' }}>
         <Link to={`/blog/${id}`}>
-          <div className="thumb" style={{ backgroundImage: `url(${thumb})` }} />
+          <div className="thumb" style={{ backgroundImage: `url(${thumb})` }}>
+            <span className="category" style={{ backgroundColor: cat.color }}>{cat.name}</span>
+          </div>
         </Link>
         <div className="content p-25">
           <Link to={`/blog/${id}`}>
