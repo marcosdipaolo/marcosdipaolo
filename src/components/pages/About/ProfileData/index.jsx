@@ -1,46 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
+import data from './profileData';
 
 const ProfileData = ({ currentLanguage }) => {
   const { t } = useTranslation();
-  const profileData = {
-    firstColumn: [
-      {
-        key: t('pages.about.firstName'),
-        value: 'Marcos',
-      }, {
-        key: t('pages.about.lastName'),
-        value: 'Di Paolo',
-      }, {
-        key: t('pages.about.age'),
-        value: `46 ${t('pages.about.years')}`,
-      }, {
-        key: t('pages.about.nationality'),
-        value: t('pages.about.argentine'),
-      }, {
-        key: t('pages.about.freelance'),
-        value: t('pages.about.available'),
-      },
-    ],
-    secondColumn: [
-      {
-        key: t('pages.about.address'),
-        value: 'Buenos Aires',
-      }, {
-        key: t('pages.about.phone'),
-        value: '+5491141451155',
-      }, {
-        key: t('pages.about.email'),
-        value: `{${t('pages.about.mySkypeUser')}}@gmail.com`,
-      }, {
-        key: t('pages.about.skype'),
-        value: 'marcosdipaolo',
-      }, {
-        key: t('pages.about.languages'),
-        value: 'Spanish, English',
-      },
-    ],
-  };
+
+  const profileData = data(t);
+
   return (
     <div className="row profile-data">
       <div className="col-6">

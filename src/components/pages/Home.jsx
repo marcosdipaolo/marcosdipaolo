@@ -23,7 +23,7 @@ const Home = (props) => {
             {/*  alt="" */}
             {/*  className="w-280 d-none d-sm-inline-block d-lg-none" */}
             {/* /> */}
-            <h6 className="d-block d-sm-none text-upper">hi there!</h6>
+            <h6 className="d-block d-sm-none text-upper">{t('pages.home.hiThere')}</h6>
             <h1 className="mt-sm-4 mt-lg-0 mb-10">
               {t('pages.home.im')}
               <span>

@@ -3,6 +3,7 @@
     "pages": {
       "home": {
         "im": "i'm",
+        "hiThere": "hi there!",
         "miniCv": "I'm an Argentinean based fullstack developer focused on crafting clean & maintainable code across the full stack of an app. I am passionate about what I do and I love learning all the time about it.",
         "moreAboutMe": "more about me"
       },

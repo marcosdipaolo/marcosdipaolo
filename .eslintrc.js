@@ -25,6 +25,7 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'react/prop-types': 'off',
     'react/no-danger': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'no-shadow': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',

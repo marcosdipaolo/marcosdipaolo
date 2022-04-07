@@ -3,6 +3,7 @@
     "pages": {
       "home": {
         "im": "soy",
+        "hiThere": "Hola!",
         "miniCv": "Soy un programador full stack basado en Mendoza, Argentina, enfocado en la implementación de código limpio y mantenible a través de todo el stack de la aplicación. Amo lo que hago y me apasiona aprender sobre ello todo el tiempo.",
         "moreAboutMe": "mas acerca de mí"
       },
