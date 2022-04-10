@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'https://blog.marcosdipaolo.com',
+  baseURL: 'https://diario.marcosdipaolo.com',
 });

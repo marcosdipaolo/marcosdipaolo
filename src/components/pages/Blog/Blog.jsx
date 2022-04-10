@@ -39,19 +39,20 @@ class Blog extends Component {
         <SectionTitle tT="pages.blog.sectionTitle" tBg="pages.blog.titleBg" />
         <div className="position-relative">
           {!this.props.blog.posts.length ? <div style={{ minHeight: '200px' }}><Spinner /></div> : null}
+          <Nav />
           <div className="row">
             {
-                            this.props.blog.posts.map((post) => (
-                              <PostPreview
-                                cat={this.renderCat(post.categories[0])}
-                                id={post.id}
-                                key={post.id}
-                                title={post.title.rendered}
-                                content={post.excerpt.rendered}
-                                thumb={thumbnailResolver(post, 'blog')}
-                              />
-                            ))
-                        }
+              this.props.blog.posts.map((post) => (
+                <PostPreview
+                  cat={this.renderCat(post.categories[0])}
+                  id={post.id}
+                  key={post.id}
+                  title={post.title.rendered}
+                  content={post.excerpt.rendered}
+                  thumb={thumbnailResolver(post, 'blog')}
+                />
+              ))
+            }
           </div>
           <Nav />
         </div>
