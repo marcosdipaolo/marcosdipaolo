@@ -82,6 +82,7 @@
       },
       "blog": {
         "sectionTitle": "<0>mi  <1>blog</1></0>",
+        "searchPlaceholder": "Ingresá tu búsqueda",
         "titleBg": "artículos",
         "categories": {
           "development": "desarrollo",

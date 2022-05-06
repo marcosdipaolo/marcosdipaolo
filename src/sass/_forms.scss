@@ -1,4 +1,4 @@
-input,
+input, input.search,
 textarea {
     display: inline-block;
     width: 100%;
@@ -9,6 +9,19 @@ textarea {
         outline: none;
     }
     color: #eee;
+}
+
+.input-group-prepend {
+    border-right: 1px solid #000;
+    span {
+        border-radius: 20px 0 0 20px;
+        background-color: #252525;
+        border-left: 1px solid #252525;
+        border-top: 1px solid #252525;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #252525;
+        color: #eee;
+    }
 }
 
 input[type="text"] {

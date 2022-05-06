@@ -18,7 +18,7 @@ const Skills = () => {
       <div className="col-12">
         <h3 className="col-12 text-upper my-50">{t('pages.about.mySkills')}</h3>
       </div>
-      {devData.map((data) => <Skill {...data} />)}
+      {devData.map((data) => <Skill key={data.language} {...data} />)}
     </div>
   );
 };

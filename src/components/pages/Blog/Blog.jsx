@@ -9,6 +9,10 @@ import Spinner from '../../Spinner';
 import SectionTitle from '../../SectionTitle';
 
 class Blog extends Component {
+  state = {
+    isSearch: false,
+  };
+
   componentDidMount() {
     this.props.getPosts(this.props.blog.currentPage || 1);
   }
@@ -37,12 +41,24 @@ class Blog extends Component {
     return (
       <section className="posts container px-25 st-list">
         <SectionTitle tT="pages.blog.sectionTitle" tBg="pages.blog.titleBg" />
+        <div className="search-group input-group">
+          <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1"><i className="fa fa-search" /></span>
+          </div>
+          <input
+            type="text"
+            className="search form-control"
+            placeholder={this.props.t('pages.blog.searchPlaceholder')}
+            aria-label={this.props.t('pages.blog.searchPlaceholder')}
+            aria-describedby="basic-addon1"
+          />
+        </div>
         <div className="position-relative">
           {!this.props.blog.posts.length ? <div style={{ minHeight: '200px' }}><Spinner /></div> : null}
           <Nav />
           <div className="row">
             {
-              this.props.blog.posts.map((post) => (
+              (!this.state.isSearch) && this.props.blog.posts.map((post) => (
                 <PostPreview
                   cat={this.renderCat(post.categories[0])}
                   id={post.id}

@@ -82,6 +82,7 @@
       },
       "blog": {
         "sectionTitle": "<0>my  <1>blog</1></0>",
+        "searchPlaceholder": "Enter your search",
         "titleBg": "posts",
         "categories": {
           "development": "development",
