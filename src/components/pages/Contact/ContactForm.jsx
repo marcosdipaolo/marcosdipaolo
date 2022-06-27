@@ -25,7 +25,7 @@ export class ConctactForm extends Component {
 
   hideNotification = () => new Promise((res) => {
     this.setState({ notificationShow: false });
-    setTimeout(() => { res(); }, 500);
+    setTimeout(res, 500);
   })
 
   showNotification = (status, message) => {
@@ -51,7 +51,6 @@ export class ConctactForm extends Component {
       name, email, subject, message,
     } = this.state;
     this.setState({ loading: true });
-    console.log('token: ', process.env.REACT_APP_API_TOKEN, 'url: ', process.env.REACT_APP_BACKEND_URL);
     mailSender.post('/api/mail', {
       name, email, subject, message,
     }, {
