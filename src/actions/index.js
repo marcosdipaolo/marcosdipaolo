@@ -28,7 +28,7 @@ export const getPost = (id) => async (dispatch) => {
   });
 };
 
-export const getPosts = (page) => async (dispatch, getState) => {
+export const getPosts = (page, search = '') => async (dispatch, getState) => {
   if (!page) {
     dispatch({
       type: GET_POSTS,
@@ -44,7 +44,11 @@ export const getPosts = (page) => async (dispatch, getState) => {
   if (page === currentPage) {
     return;
   }
-  const { data, headers } = await blog.get(`/wp-json/wp/v2/posts?_embed&per_page=12&page=${page}`);
+  let url = `/wp-json/wp/v2/posts?_embed&per_page=12&page=${page}`;
+  if (search.length) {
+    url = `${url}&search=${search}`;
+  }
+  const { data, headers } = await blog.get(url);
   dispatch({
     type: GET_POSTS,
     payload: {

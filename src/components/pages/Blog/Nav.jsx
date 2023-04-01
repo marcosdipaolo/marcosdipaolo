@@ -1,7 +1,9 @@
 import { connect } from 'react-redux';
 import { getPosts } from '../../../actions';
 
-const Nav = ({ blog, getPosts }) => {
+const Nav = ({
+  blog, getPosts, search,
+}) => {
   const buildListData = () => {
     const data = [];
     for (let i = 1; i <= blog.totalPages; i++) {
@@ -15,7 +17,11 @@ const Nav = ({ blog, getPosts }) => {
 
   const onClickHandler = (n) => {
     getPosts(null);
-    getPosts(n);
+    if (search) {
+      getPosts(n, search);
+    } else {
+      getPosts(n);
+    }
   };
 
   return (

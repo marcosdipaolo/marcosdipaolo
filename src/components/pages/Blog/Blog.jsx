@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { Component } from 'react';
+import { useEffect, useState } from 'react';
 import { withTranslation } from 'react-i18next';
 import { getPosts } from '../../../actions';
 import PostPreview from './PostPreview';
@@ -8,74 +8,96 @@ import thumbnailResolver from './thumbnailResolver';
 import Spinner from '../../Spinner';
 import SectionTitle from '../../SectionTitle';
 
-class Blog extends Component {
-  state = {
-    isSearch: false,
-  };
+const Blog = ({
+  blog, getPosts, t,
+}) => {
+  const [isSearch, setIsSearch] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
 
-  componentDidMount() {
-    this.props.getPosts(this.props.blog.currentPage || 1);
-  }
+  useEffect(() => {
+    getPosts(blog.currentPage || 1);
+  }, []);
 
-  renderCat(cat) {
+  useEffect(() => {
+    if (isSearch && searchValue) {
+      getPosts(null);
+      getPosts(1, searchValue);
+    }
+  }, [isSearch, searchValue]);
+
+  const renderCat = (cat) => {
     switch (cat) {
       case 7:
         return {
-          name: this.props.t('pages.blog.categories.development'),
+          name: t('pages.blog.categories.development'),
           color: '#3266a8',
         };
       case 3:
         return {
-          name: this.props.t('pages.blog.categories.music'),
+          name: t('pages.blog.categories.music'),
           color: '#d9462c',
         };
       default:
         return {
-          name: this.props.t('pages.blog.categories.music'),
+          name: t('pages.blog.categories.music'),
           color: '#d9462c',
         };
     }
-  }
+  };
 
-  render() {
-    return (
-      <section className="posts container px-25 st-list">
-        <SectionTitle tT="pages.blog.sectionTitle" tBg="pages.blog.titleBg" />
-        <div className="search-group input-group">
-          <div className="input-group-prepend">
-            <span className="input-group-text" id="basic-addon1"><i className="fa fa-search" /></span>
-          </div>
-          <input
-            type="text"
-            className="search form-control"
-            placeholder={this.props.t('pages.blog.searchPlaceholder')}
-            aria-label={this.props.t('pages.blog.searchPlaceholder')}
-            aria-describedby="basic-addon1"
-          />
+  const onSearchChangeHandler = (e) => {
+    setIsSearch(true);
+    setSearchValue(e.target.value);
+  };
+
+  const backToPosts = () => {
+    setIsSearch(false);
+    setSearchValue('');
+    getPosts(null);
+    getPosts(1);
+  };
+
+  return (
+    <section className="posts container px-25 st-list">
+      <SectionTitle tT="pages.blog.sectionTitle" tBg="pages.blog.titleBg" />
+      <div className="search-group input-group">
+        <div className="input-group-prepend">
+          <span className="input-group-text" id="basic-addon1"><i className="fa fa-search" /></span>
         </div>
-        <div className="position-relative">
-          {!this.props.blog.posts.length ? <div style={{ minHeight: '200px' }}><Spinner /></div> : null}
-          <Nav />
-          <div className="row">
-            {
-              (!this.state.isSearch) && this.props.blog.posts.map((post) => (
-                <PostPreview
-                  cat={this.renderCat(post.categories[0])}
-                  id={post.id}
-                  key={post.id}
-                  title={post.title.rendered}
-                  content={post.excerpt.rendered}
-                  thumb={thumbnailResolver(post, 'blog')}
-                />
-              ))
-            }
-          </div>
-          <Nav />
+        <input
+          type="text"
+          className="search form-control"
+          placeholder={t('pages.blog.searchPlaceholder')}
+          aria-label={t('pages.blog.searchPlaceholder')}
+          aria-describedby="basic-addon1"
+          onKeyDown={onSearchChangeHandler}
+          onChange={(e) => setSearchValue(e.target.value)}
+          value={searchValue}
+        />
+      </div>
+      <div className="position-relative">
+        {!blog.posts.length ? <div style={{ minHeight: '200px' }}><Spinner /></div> : null}
+        <Nav search={searchValue} />
+        {isSearch && <p className="mdp-btn pointer" onClick={backToPosts}>Back to all posts</p>}
+        <div className="row">
+          {
+            blog.posts.map((post) => (
+              <PostPreview
+                cat={renderCat(post?.categories[0])}
+                id={post.id}
+                key={post.id}
+                title={post.title.rendered}
+                content={post.excerpt.rendered}
+                thumb={thumbnailResolver(post, 'blog')}
+              />
+            ))
+           }
         </div>
-      </section>
-    );
-  }
-}
+        <Nav />
+      </div>
+    </section>
+  );
+};
 
 const mapStateToProps = (state) => ({
   blog: state.blog,

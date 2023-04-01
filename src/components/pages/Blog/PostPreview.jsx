@@ -13,7 +13,7 @@ const PostPreview = ({
       <article style={{ height: '100%' }}>
         <Link to={`/blog/${id}`}>
           <div className="thumb" style={{ backgroundImage: `url(${thumb})` }}>
-            <span className="category" style={{ backgroundColor: cat.color }}>{cat.name}</span>
+            {cat && <span className="category" style={{ backgroundColor: cat.color }}>{cat.name}</span>}
           </div>
         </Link>
         <div className="content p-25">
@@ -27,6 +27,10 @@ const PostPreview = ({
       </article>
     </div>
   );
+};
+
+PostPreview.defaultProps = {
+  cat: null,
 };
 
 export default PostPreview;
