@@ -19,11 +19,16 @@ const Blog = ({
   }, []);
 
   useEffect(() => {
-    if (isSearch && searchValue) {
-      getPosts(null);
-      getPosts(1, searchValue);
+    let posts;
+    if (isSearch) {
+      posts = setTimeout(() => {
+        console.log('requesting');
+        getPosts(null);
+        getPosts(1, searchValue);
+      }, 2000);
     }
-  }, [isSearch, searchValue]);
+    return () => clearTimeout(posts);
+  }, [searchValue]);
 
   const renderCat = (cat) => {
     switch (cat) {
