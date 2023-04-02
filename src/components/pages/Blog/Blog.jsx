@@ -25,7 +25,7 @@ const Blog = ({
         console.log('requesting');
         getPosts(null);
         getPosts(1, searchValue);
-      }, 2000);
+      }, 1500);
     }
     return () => clearTimeout(posts);
   }, [searchValue]);
