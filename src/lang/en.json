@@ -87,7 +87,8 @@
         "categories": {
           "development": "development",
           "music": "music"
-        }
+        },
+        "backToPosts": "Back to all posts"
       },
       "contact": {
         "sectionTitle": "<0>get in <1>touch</1></0>",

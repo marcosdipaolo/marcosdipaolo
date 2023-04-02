@@ -87,7 +87,8 @@
         "categories": {
           "development": "desarrollo",
           "music": "música"
-        }
+        },
+        "backToPosts": "Volver a todos los artículos"
       },
       "contact": {
         "sectionTitle": "<0>escribi  <1>me</1></0>",

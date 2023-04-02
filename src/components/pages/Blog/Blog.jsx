@@ -13,6 +13,7 @@ const Blog = ({
 }) => {
   const [isSearch, setIsSearch] = useState(false);
   const [searchValue, setSearchValue] = useState('');
+  const [showBackToPostsButton, setShowBackToPostsButton] = useState(false);
 
   useEffect(() => {
     getPosts(blog.currentPage || 1);
@@ -22,8 +23,8 @@ const Blog = ({
     let posts;
     if (isSearch) {
       posts = setTimeout(() => {
-        console.log('requesting');
         getPosts(null);
+        setShowBackToPostsButton(!(searchValue === ''));
         getPosts(1, searchValue);
       }, 1000);
     }
@@ -58,6 +59,7 @@ const Blog = ({
   const backToPosts = () => {
     setIsSearch(false);
     setSearchValue('');
+    setShowBackToPostsButton(false);
     getPosts(null);
     getPosts(1);
   };
@@ -83,7 +85,7 @@ const Blog = ({
       <div className="position-relative">
         {!blog.posts.length ? <div style={{ minHeight: '200px' }}><Spinner /></div> : null}
         <Nav search={searchValue} />
-        {isSearch && <p className="mdp-btn pointer" onClick={backToPosts}>Back to all posts</p>}
+        {showBackToPostsButton && <p className="mdp-btn pointer" onClick={backToPosts}>{t('pages.blog.backToPosts')}</p>}
         <div className="row">
           {
             blog.posts.map((post) => (
