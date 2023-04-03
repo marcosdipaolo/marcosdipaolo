@@ -28,7 +28,7 @@ const Home = (props) => {
               {t('pages.home.im')}
               <span>
                 {' '}
-                Marcos Di Paolo
+                Marcos Di Paolo on Render.com
               </span>
             </h1>
             <p className=" lh-32">
