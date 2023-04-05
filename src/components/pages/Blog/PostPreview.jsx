@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const PostPreview = ({
-  content, id, thumb, title, cat,
+  content, id, thumb, title, cat, date,
 }) => {
   const parseContent = () => {
     const tmp = document.createElement('DIV');
@@ -24,6 +24,7 @@ const PostPreview = ({
           </Link>
           <div className="body" dangerouslySetInnerHTML={{ __html: `${parseContent()}...` }} />
         </div>
+        <span className="date"><strong>{new Date(date).getFullYear()}</strong></span>
       </article>
     </div>
   );

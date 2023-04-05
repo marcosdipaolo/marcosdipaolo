@@ -96,6 +96,7 @@ const Blog = ({
                 title={post.title.rendered}
                 content={post.excerpt.rendered}
                 thumb={thumbnailResolver(post, 'blog')}
+                date={post.date}
               />
             ))
            }
