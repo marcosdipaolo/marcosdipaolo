@@ -53,10 +53,6 @@ export class ConctactForm extends Component {
     this.setState({ loading: true });
     mailSender.post('/api/mail', {
       name, email, subject, message,
-    }, {
-      headers: {
-        Authorization: `Bearer ${process.env.REACT_APP_MAIL_TOKEN}`,
-      },
     }).then((response) => {
       this.clearForm();
       this.setState({ loading: false });
