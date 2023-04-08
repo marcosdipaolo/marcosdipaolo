@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'https://diario.marcosdipaolo.com.ar',
+  baseURL: 'https://contact-z5rd.onrender.com',
 });
