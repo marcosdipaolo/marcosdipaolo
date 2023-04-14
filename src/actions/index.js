@@ -44,17 +44,15 @@ export const getPosts = (page, search = '') => async (dispatch, getState) => {
   if (page === currentPage) {
     return;
   }
-  let url = `/wp-json/wp/v2/posts?_embed&per_page=12&page=${page}`;
-  if (search.length) {
-    url = `${url}&search=${search}`;
-  }
+  const url = `/api/posts?perPage=12&page=${page}&search=${search}`;
   const { data, headers } = await blog.get(url);
+  console.log(headers);
   dispatch({
     type: GET_POSTS,
     payload: {
-      posts: data,
+      posts: data.posts,
       currentPage: page,
-      totalPages: headers['x-wp-totalpages'],
+      totalPages: data['X-Wp-TotalPages'],
     },
   });
 };
