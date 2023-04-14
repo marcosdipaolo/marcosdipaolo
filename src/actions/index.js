@@ -21,7 +21,7 @@ export const getPost = (id) => async (dispatch) => {
     });
     return;
   }
-  const { data } = await blog.get(`/posts/${id}?_embed`);
+  const { data } = await blog.get(`/api/posts/${id}?_embed`);
   dispatch({
     type: GET_POST,
     payload: data,
