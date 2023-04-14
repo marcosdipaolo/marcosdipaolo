@@ -24,7 +24,7 @@ export const getPost = (id) => async (dispatch) => {
   const { data } = await blog.get(`/api/posts/${id}?_embed`);
   dispatch({
     type: GET_POST,
-    payload: data,
+    payload: Array.isArray(data) && data.length > 0 ? data[0] : null,
   });
 };
 
