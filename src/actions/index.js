@@ -24,7 +24,7 @@ export const getPost = (id) => async (dispatch) => {
   const { data } = await blog.get(`/api/posts/${id}?_embed`);
   dispatch({
     type: GET_POST,
-    payload: Array.isArray(data) && data.length > 0 ? data[0] : null,
+    payload: data,
   });
 };
 
@@ -45,8 +45,7 @@ export const getPosts = (page, search = '') => async (dispatch, getState) => {
     return;
   }
   const url = `/api/posts?perPage=12&page=${page}&search=${search}`;
-  const { data, headers } = await blog.get(url);
-  console.log(headers);
+  const { data } = await blog.get(url);
   dispatch({
     type: GET_POSTS,
     payload: {
