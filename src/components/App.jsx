@@ -31,7 +31,7 @@ const App = ({
       fetch(`${process.env.REACT_APP_BACKEND_URL}/api/health`, {
         method: 'POST',
       });
-    }, 300000);
+    }, process.env.REACT_APP_KEEP_ALIVE_INTERVAL);
     return () => {
       clearInterval(intervalId);
     };
