@@ -27,6 +27,17 @@ const App = ({
   const { i18n } = useTranslation();
 
   useEffect(() => {
+    const intervalId = setInterval(() => {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/api/health`, {
+        method: 'POST',
+      });
+    }, 300000);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  useEffect(() => {
     let url = window.location.pathname.substr(1) || 'home';
     if (url.includes('/')) {
       [url] = url.split('/');
